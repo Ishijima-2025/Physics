@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>無題ドキュメント</title>
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style1 {	font-size: large;
+	color: #0000FF;
+}
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">フィックの第一法則
+</p>
+<p>さて，いままで拡散に対する時間，距離に関する定量的な議論をしてきましたが，ここでは基本となる拡散方程式を理解していきましょう．</p>
+<p>まずは，<span class="Red-Bold">フィックの第一法則</span>，です．</p>
+<p>ここでは，</p>
+<p><a href="http://books.google.co.jp/books?id=DjdgXGLoJY8C&amp;dq=random+walk+berg&amp;pg=PP1&amp;ots=_wZz9c65xN&amp;sig=gLOJfA9ea48LTE_w7DU0aoLLiGQ&amp;hl=ja&amp;prev=http://www.google.co.jp/search?hl=ja&amp;rlz=1B3GGGL_jaJP259JP259&amp;q=random+walk+berg&amp;btnG=%E6%A4%9C%E7%B4%A2&amp;lr=&amp;sa=X&amp;oi=print&amp;ct=title&amp;cad=one-book-with-thumbnail" target="_blank">生物学におけるランダムウォーク</a>，を参考としました．<br />
+また，卒業生である佐川君の資料も参考にしました，ありがとうございます．</p>
+<p> まずは，単純な一次元のモデルから考えていきましょう．</p>
+<p><a href="Random-02.html">ここ</a>，でも書きましたように，</p>
+<p>まず，１次元の空間を考えます．<br />
+粒子は，この１次元上しか運動できない，とします．<br />
+そして，条件として，<br />
+<span class="style1">　１．各粒子は速度ｖでτ秒ごとにδ＝ｖτだけ，右か左に移動する<br />
+　２．左右に移動する確率は１/２で等しい<br />
+　３．各粒子は他のすべての粒子と無関係に動く</span><br />
+というものを与えます．</p>
+<p><img src="Random-01.jpg" alt="" width="535" height="261" /></p>
+<p>&nbsp;</p>
+<p>そして，ある地点，<span class="X-Large-Blue">ｘ</span>，とそのとなり，<span class="X-Large-Blue">ｘ＋δ</span>，を考えます．</p>
+<p><img src="Fick-01.jpg" width="569" height="205" /></p>
+<p>ここでは，複数の粒子を扱いますので，ｘ地点には，N(x)個の分子が存在すると考えます．<br />
+つまり，単位時間に，<br />
+　<span class="Red-Bold">その半分が右へ，半分が左へ，</span><br />
+移動するわけです．</p>
+<p>では，ｘとｘ＋δの間の分子の移動は，1/2N（ｘ＋δ）だけ減少し，1/2N(x)だけ上昇することになるので，</p>
+<p><img src="Fick-01.gif" width="191" height="51" /></p>
+<p>となります．さて，これを三次元に拡張するために，断面積Aの直方体を考えます．</p>
+<p><img src="Fick-02.jpg" width="523" height="199" /></p>
+<p>時間間隔τあたりの流束は，</p>
+<p><img src="Fick-02.gif" width="230" height="80" /></p>
+<p>となります．少し変形して，</p>
+<p><img src="Fick-03.gif" width="261" height="63" /></p>
+<p>となります．角括弧の各項は，単位体積あたりの分子数となるので，濃度となるので，</p>
+<p><img src="Fick-04.gif" width="241" height="51" /></p>
+<p>となります．ここで，定数Dを<a href="Random-06.html">この関係式</a>を用いて利用します．</p>
+<p>δ→０の極限では，偏微分となり，</p>
+<p><img src="Fick-05.gif" width="105" height="56" /></p>
+<p>となります．これが<span class="X-Large-RED">フィックの第一法則</span>です．</p>
+<p>次に，第二法則を求めてみましょう．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="kenkyu.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Fick-02.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

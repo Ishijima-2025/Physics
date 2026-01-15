@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>heat-03</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-Blue"><span class="X-Large-Bold-RED">球体の発熱による温度分布-03</span></p>
+<p>まずは，簡単な方から．</p>
+<p class="X-Large-Blue">球の外側の熱拡散方程式</p>
+<p>\(\Large  - \kappa  \frac{1}{r^2} \frac{d}{dr} (r^2 \cdot \frac{dT_{out}}{dr}) = 0 \) </p>
+<p>\(\Large   \frac{d}{dr} (r^2 \cdot \frac{dT_{out}}{dr}) = 0 \) </p>
+<p>\(\Large   r^2 \cdot \frac{dT_{out}}{dr} = C_3 \) </p>
+<p>\(\Large \frac{dT_{out}}{dr} = \frac{C_3}{r^2} \) </p>
+<p>\(\Large T_{out} = -\frac{C_3}{r} + C_4\) </p>
+<p>となります．</p>
+<p>r→∞の条件においては，球からの熱の影響を受けず室温（R.T.）となるとすると，</p>
+<p>\(\Large T_{out} = -\frac{C_3}{r} + R.T.\) </p>
+<p>となります．</p>
+<p>ここでも， <a href="heat-02.html">前出</a>のr=Rでの熱流量から， </p>
+<p>\(\Large \frac{dT_{out}}{dr} \vert_{r=R} = \frac{C_3}{R^2} = - \frac{1}{3} \frac{p \ R}{\kappa}  \) </p>
+<p>\(\Large C_3 =  - \frac{1}{3} \frac{p \ R^3}{\kappa} \) </p>
+<p>となるので，</p>
+<p>\(\Large T_{out} =  \frac{1}{3} \frac{p \ R^3}{\kappa} \frac{1}{r} + R.T.\) </p>
+<p>と記述できます．</p>
+<p>つまり，<br />
+  <span class="Large-Bold-Red">　熱源である球の外の温度変化は，距離rに反比例して減少する</span><br />
+ことになります．</p>
+<p>&nbsp;</p>
+<p class="X-Large-Blue">球の内側の熱拡散方程式</p>
+<p>\(\Large  - \kappa  \frac{1}{r^2} \frac{d}{dr} (r^2 \cdot \frac{dT_{in}}{dr}) = p \) </p>
+<p>\(\Large   \frac{d}{dr} (r^2 \cdot \frac{dT_{in}}{dr}) = - \frac{p \ r^2}{\kappa} \) </p>
+<p>\(\Large   r^2 \cdot \frac{dT_{in}}{dr} = - \frac{1}{3} \frac{p \ r^3}{\kappa}+C_1 \) </p>
+<p>\(\Large \frac{dT_{in}}{dr} = - \frac{1}{3} \frac{p \ r}{\kappa}+ \frac{C_1}{r^2} \) </p>
+<p>ここで，前出のr=Rの場合の熱流量と組み合わせると，</p>
+<p>\(\Large  \frac{dT_{in}}{dr} \vert_{r=R} = - \frac{1}{3} \frac{p \ R}{\kappa}+ \frac{C_1}{R^2} = - \frac{p \ R}{3 \kappa}\) </p>
+<p>\(\Large  \frac{C_1}{R^2} = - \frac{p \ R}{3 \kappa} + \frac{p \ R}{3 \kappa} =0 \) </p>
+<p>となり，C<sub>1</sub>=0，となります．従って，</p>
+<p>\(\Large \frac{dT_{in}}{dr} = - \frac{1}{3} \frac{p \ r}{\kappa} \) </p>
+<p>\(\Large T_{in} = - \frac{1}{6} \frac{p \ r^2}{\kappa} +C_2\) </p>
+<p>となります．</p>
+<p>r=Rにおいて内外の温度が一致するので，</p>
+<p>\(\Large  T_{in} \vert_{r=R} = T_{out} \vert_{r=R} \) </p>
+<p>\(\Large - \frac{1}{6} \frac{p \ R^2}{\kappa} +C_2 = \frac{1}{3} \frac{p \ R^3}{\kappa} \frac{1}{R} + R.T.\) </p>
+<p>\(\Large \begin{align*} C_2 &amp;=  \frac{1}{3} \frac{p \ R^2}{\kappa} + R.T. + \frac{1}{6} \frac{p \ R^2}{\kappa} \\<br /> 
+  &amp;= 
+\frac{1}{2} \frac{p \ R^2}{\kappa} + R.T. \end{align*} \) </p>
+<p>となるので，</p>
+<p>\(\Large \begin{align*} T_{in} &amp;= - \frac{1}{6} \frac{p \ r^2}{\kappa} + \frac{1}{2} \frac{p \ R^2}{\kappa} + R.T. \\<br />
+  &amp;= 
+\frac{1}{6} \frac{p}{\kappa} \left( 3R^2 -r^2 \right)  + R.T.  \end{align*} \) </p>
+<p>となります． </p>
+<p>&nbsp;</p>
+<p><span class="X-Large-Blue">まとめ</span></p>
+<p>\(\Large T_{out} =  \frac{1}{3} \frac{p \ R^3}{\kappa} \frac{1}{r} + R.T.\) </p>
+<p>\(\Large T_{in} = 
+\frac{1}{6} \frac{p}{\kappa} \left( 3R^2 -r^2 \right)  + R.T. \) </p>
+<p>&nbsp;</p>
+<p>次に，具体的な値を入れてみましょう．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="heat-02.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="heat-04.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

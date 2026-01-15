@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>heat-02</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-Blue"><span class="X-Large-Bold-RED">球体の発熱による温度分布-02</span></p>
+<p class="Large-Bold-Blue">&nbsp;</p>
+<p class="Large-Bold-Blue">式（２）</p>
+<p class="X-Large-Blue">熱拡散方程式</p>
+<p>昨今，細胞内温度計測が盛んに行われています．<br />
+</p>
+<p>直径，L，の球体において，発熱量，p，が一様に発生している状況を考えます．<br />
+熱拡散方程式は，</p>
+<p>\(\Large C_v \cdot \partial_t T(r,t) = \kappa \cdot \nabla^2 T(r,t) + p(r,t)\) </p>
+<p>となります．</p>
+<p>ここで，<br />
+  　Cv：単位体積熱容量 [J/(m<sup>3</sup>・K)]　＝　C（比熱[J/(kg・K)]）×ρ（密度[kg/m<sup>3</sup>]）<br />
+　κ：熱伝導率 [W/(m.K)]<br />
+　p：単位体積，単位時間あたりの発熱量 [W/m<sup>3</sup>]<br />
+です．</p>
+<p>ここでは定常状態を考えるので，第一項が０となり，さらに<a href="Random Walk-2-7.html">極座標</a>で書き換えると，</p>
+<p>\(\Large  - \kappa  \frac{1}{r^2} \frac{d}{dr} (r^2 \cdot \frac{dT}{dr}) = p(r,t) \) </p>
+<p>となります．ただし，右辺，p，は細胞内であり，細胞外には発熱源はないので，</p>
+<p>\(\Large  - \kappa \frac{1}{r^2} \frac{d}{dr} (r^2 \cdot \frac{dT}{dr}) = \begin{pmatrix} p : (0&lt;r&lt;R) \\ 0 : (R&lt;r) \end{pmatrix} \) </p>
+<p>と場合分けして考えます．ここでRは半径です．</p>
+<p>&nbsp;</p>
+<p class="X-Large-Blue">次元</p>
+<p>ここで，次元を考えてみましょう．</p>
+<p class="Blue-Bold">一次元</p>
+<p>　・左辺</p>
+<p>\(\Large C_v \cdot \partial_t T(r,t) : \left[ \frac{J}{m^3 \cdot K} \right] \left[ \frac{K}{s} \right] = \left[ \frac{W}{m^3} \right] \) </p>
+<p>　・右辺</p>
+<p>\(\Large \kappa \cdot \nabla^2 T(r,t) : \left[ \frac{W}{m \cdot K} \right] \left[ \frac{K}{m^3} \right] = \left[ \frac{W}{m^3} \right]\) </p>
+<p>となり，次元は，単位時間，単位体積あたりのエネルギーの変化　＝　単位体積あたりの仕事率，となります．</p>
+<p>従って，発熱量ｐの次元も，[W/m<sup>3</sup>]となる<span class="Red-Bold">（トータルの仕事率でないことに注意）</span>．</p>
+<p>&nbsp;</p>
+<p class="Blue-Bold">極座標</p>
+<p>\(\Large  r^2 \frac{d}{dr} (r^2 \cdot \frac{dT}{dr}) : [m^2 \cdot \frac{K}{m} = m \cdot K] \) </p>
+<p>\(\Large   \frac{d}{dr} (r^2 \cdot \frac{dT}{dr}) :[  K] \) </p>
+<p>\(\Large  - \kappa : [ \frac{W}{m \cdot K}]\) </p>
+<p>\(\Large  - \kappa \frac{1}{r^2} \frac{d}{dr} (r^2 \cdot \frac{dT}{dr}) : [ \frac{W}{m \cdot K} \cdot \frac{1}{m^2} K] = [ \frac{J}{m^3 \cdot s}] \) </p>
+<p>となり，単位時間，単位体積あたりのエネルギーの変化　＝　単位体積あたりの仕事率，となります．</p>
+<p>&nbsp;</p>
+<p class="X-Large-Blue">単位時間，単位体積あたりの発熱量と総発熱量</p>
+<p>この二つの関係は，総発熱量をWとすると，</p>
+<p>\(\Large  W = p \cdot V\) </p>
+<p>となります．ここでVは球の体積です．</p>
+<p>また，球表面での熱の流出量，ｑ，は，定常状態であるので総発熱量と一致します．従って，</p>
+<p>\(\Large  q = \frac{W}{S}\) </p>
+<p>となります．ここでSは球の表面積です．従って，</p>
+<p>\(\Large  q = \frac{W}{S} = \frac{pV}{S} = p \frac{\frac{4}{3} \pi R^3}{4 \pi R^2} = \frac{p \ R}{3}\) </p>
+<p>となります．</p>
+<p>&nbsp;</p>
+<p class="X-Large-Blue">球の内外の環境のすりあわせ</p>
+<p>方程式を解く上で，重要なのは，<br />
+  <span class="Large-Bold-Red">　界面での内外の温度は一致<br />
+　界面での内外の熱の流出量は一致</span><br />
+という二つの条件が必要となります．</p>
+<p>必要とならないのは，<br />
+　<span class="Red">温度の傾き<br />
+は連続的にならなくても問題ありません</span>．界面を挟んで熱伝導率が異なる場合には不連続（<span class="Red">温度は一致，温度がなめらかに変化しない</span>）になります．</p>
+<p>&nbsp;</p>
+<p>球の外と内側では温度は連続的につながっていると考えられるので，r=R　（Rは半径）で値が一致する必要があります．</p>
+<p>\(\Large T_{in} \vert_{r=R} = T_{out} \vert_{r=R} \)</p>
+<p>の条件を満たす必要があります．</p>
+<p>&nbsp;</p>
+<p>さらに，球表面での熱の流出量，ｑ，は，温度の時間微分と熱伝導率との積とも記すことができるので，</p>
+<p>\(\Large  - \kappa_{in} \frac{dT_{in}}{dr} \vert_{r=R} = - \kappa_{out} \frac{dT_{out}}{dr} \vert_{r=R} = q\) </p>
+<p>\(\Large   \frac{dT}{dr} \vert_{r=R} =  q = - \frac{p \ R}{3  \kappa} \) </p>
+<p>と表すことができます．</p>
+<p>&nbsp;</p>
+<p>次ページでは，球の内外での熱伝導方程式を考えていきましょう．</p>
+<p><span class="style7"><a href="heat-01.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="heat-03.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

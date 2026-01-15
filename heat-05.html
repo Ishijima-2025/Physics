@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>heat-05</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-Blue"><span class="X-Large-Bold-RED">球体の発熱による温度分布-05</span></p>
+<p class="Large-Bold-Blue">&nbsp;</p>
+<p class="X-Large-Blue">Baffouらの報告との比較</p>
+<p>球の外と内側では温度は連続的につながっていると考えられるので，r=Rで値，傾きが一致する必要があります．</p>
+<p>彼らは周辺との温度差，ΔT，で表記していますので，</p>
+<p>\(\Large \Delta T_{out} = T_{r=R} - T_{R.T.} = - \frac{1}{3} \frac{p \ R^3}{\kappa}\frac{1}{r}\) </p>
+<p>&nbsp;</p>
+<p>紛らわしいのですが，彼らの論文では，</p>
+<p>　p：the heat-source density (power per unit volume)　：　単位体積あたりの発熱量 <br />
+　P：　the typical heat power delivered by a cell 　　　：　１細胞あたりの発熱量</p>
+<p>と定義しています．</p>
+<p>さらに，彼らの表記，L，は直径であり，L = 2R，となります．</p>
+<p>ですので，それに合わせると，</p>
+<p>\(\Large P = p \cdot V = p \cdot \frac{4}{3} \pi \ R^3 \)</p>
+<p>となるので，</p>
+<p>\(\Large p = \frac{3 \ P}{4 \pi \ R^3} \)</p>
+<p>\(\Large \Delta T =  \frac{1}{3} \frac{p \ R^2}{\kappa} \)</p>
+<p>\(\Large\hspace{ 20pt } =  \frac{1}{3} \frac{R^2}{\kappa} \frac{3 \ P}{4 \pi \ R^3} \)</p>
+<p>\(\Large\hspace{ 20pt } =  \frac{ P}{4 \pi \kappa R} \)</p>
+<p>\(\Large\hspace{ 20pt } =  \frac{ P}{2 \pi \kappa L} \)</p>
+<p>となり，彼らの論文中の式（２）と一致します．</p>
+<p>ついでに．．．球の中心の温度，平均の温度，も計算してみましょう．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="heat-04.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="heat-06.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

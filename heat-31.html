@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>heat-31</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-Blue"><span class="X-Large-Bold-RED">球体の発熱による温度分布-熱源が一様ではなく，中心に局在している場合-31</span></p>
+<p>では，熱源が中心の局在していたらどうなるでしょう？</p>
+<p>基本的には，同じです．</p>
+<p>&nbsp;</p>
+<p><img src="heat-06.jpg" width="403" height="362" /></p>
+<p>上記のようなモデルを考えてみます．<br />
+　<span class="Large-Bold-Red">半径Hの熱源（熱伝導率はκ<sub>h</sub>）</span><br />
+が存在し，<br />
+<span class="Large-Bold-Red">　半径Hの熱源と細胞との界面で熱q<sub>1</sub></span><br />
+<span class="Large-Bold-Red">　半径Rの細胞と細胞膜との界面で熱q<sub>2</sub><br />
+  　半径R+Mの細胞+細胞膜と外界との界面で熱q<sub>3</sub></span><br />
+が流れるとします．</p>
+<p>今までの議論から，</p>
+<p>\(\Large   T_h = -\frac{1}{6} \frac{p}{\kappa_h} r^2 + C_1  \) </p>
+<p>\(\Large   T_{in} = -\frac{C_2}{r} + C_3  \) </p>
+<p>\(\Large   T_m = -\frac{C_4}{r} + C_5  \) </p>
+<p>\(\Large   T_{out} = -\frac{C_6}{r} + R.T  \) </p>
+<p>となることがわかります．</p>
+<p>&nbsp;</p>
+<p class="X-Large-Bold-Blue">各境界の熱の流出量 </p>
+<p>境界条件は， </p>
+<p>\(\Large \frac{dT_{in}}{dr} \vert_{r=R} =  -\frac{q_2}{\kappa_{in}} = -  \frac{p \ H^3}{3 \kappa_{in} R^2}  \) </p>
+<p>\(\Large \frac{dT_{m}}{dr} \vert_{r=R+M} =  -\frac{q_3}{\kappa_{m}} = -  \frac{p \ H^3}{3 \kappa_{m} (R+M)^2}  \) </p>
+<p>\(\Large \frac{dT_{out}}{dr} \vert_{r=R+M} =  -\frac{q_3}{\kappa_{out}} = -  \frac{p \ H^3}{3 \kappa_{out} (R+M)^2}  \) </p>
+<p>となります．</p>
+<p>&nbsp;</p>
+<p class="X-Large-Bold-Blue">球の外側の熱拡散方程式</p>
+<p>\(\Large   T_{out} = -\frac{C_6}{r} + R.T  \) </p>
+<p>\(\Large \frac{dT_{out}}{dr} \vert_{r=R+M} = \frac{C_6}{r} \vert_{r=R+M} = \frac{C_6}{(R+M)^2} = -  \frac{p \ H^3}{3 \kappa_{out} (R+M)^2}  \) </p>
+<p>\(\Large C_6 = -  \frac{p \ H^3}{3 \kappa_{out}}  \) </p>
+<p>\(\Large   T_{out} =   \frac{p \ H^3}{3 \kappa_{out}} \frac{1}{r} + R.T  \) </p>
+<p>となる．</p>
+<p class="X-Large-Bold-Blue">&nbsp;</p>
+<p class="X-Large-Bold-Blue">細胞膜の熱拡散方程式</p>
+<p>\(\Large   T_m = -\frac{C_4}{r} + C_5  \) </p>
+<p>\(\Large \frac{dT_{m}}{dr} \vert_{r=R+M} = \frac{C_4}{r^2} \vert_{r=R+M} = \frac{C_4}{(R+M)^2} = -  \frac{p \ H^3}{3 \kappa_{m} (R+M)^2}  \) </p>
+<p>\(\Large C_4 = -  \frac{p \ H^3}{3 \kappa_m}  \) </p>
+<p>\(\Large   T_m =  \frac{p \ H^3}{3 \kappa_m} \frac{1}{r} + C_5  \) </p>
+<p>&nbsp;</p>
+<p>\(\Large   T_{out} (R+M) = T_m (R+M)  \) </p>
+<p>より，</p>
+<p>\(\Large   \frac{p  H^3}{3 \kappa_{out}} \frac{1}{R+M} + R.T  = \frac{p \ H^3}{3 \kappa_m} \frac{1}{R+M} + C_5 \) </p>
+<p>\(\Large \begin{align*} C_5 &amp;= \frac{p \ H^3}{3 \kappa_{out}} \frac{1}{R+M} + R.T  - \frac{p \ H^3}{3 \kappa_m} \frac{1}{R+M} \\<br />
+  &amp;= 
+\frac{p \ H^3}{3 (R+M)} \left( \frac{1}{\kappa_{out}} - \frac{1}{\kappa_m} \right) + R.T  \end{align*} \) </p>
+<p>\(\Large    \begin{align*} T_m &amp;=  \frac{p  H^3}{3 \kappa_m} \frac{1}{r} + \frac{p \ H^3}{3 (R+M)} \left( \frac{1}{\kappa_{out}} - \frac{1}{\kappa_m} \right) + R.T  \\<br />
+&amp;= \frac{p H^3}{3} \left[ \frac{1}{\kappa_m r} + \frac{1}{R+M} \left( \frac{1}{\kappa_{out}} - \frac{1}{\kappa_m} \right) \right] + R.T   \end{align*} \) </p>
+<p>となります．</p>
+<p>次ページに，細胞内（非発熱源），細胞内（発熱源）の熱拡散方程式を解いていきましょう．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="heat-22.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="heat-32.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>heat-32</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-Blue"><span class="X-Large-Bold-RED">球体の発熱による温度分布-熱源が一様ではなく，中心に局在している場合-32</span></p>
+<p>&nbsp;</p>
+<p class="X-Large-Blue">球の内側（<span class="X-Large-Bold-RED">非</span>発熱源）の熱拡散方程式</p>
+<p>\(\Large   T_{in} = -\frac{C_2}{r} + C_3  \) </p>
+<p>\(\Large \frac{dT_{in}}{dr} \vert_{r=R} = \frac{C_2}{r^2} \vert_{r=R} = \frac{C_2}{R^2} = -  \frac{p \ H^3}{3 \kappa_{in} R^2}  \) </p>
+<p>\(\Large C_2 = -  \frac{p  H^3}{3 \kappa_{in}}  \) </p>
+<p>\(\Large   T_{in} = \frac{p  H^3}{3 \kappa_{in}} \frac{1}{r} + C_3  \) </p>
+<p>&nbsp;</p>
+<p>\(\Large  T_{in} (R) = T_{m} (R) \) </p>
+<p>より，</p>
+<p>\(\Large    \frac{p \ H^3}{3 \kappa_{in}} \frac{1}{R} + C_3 = \frac{p \ H^3}{3} \left[ \frac{1}{\kappa_m R} + \frac{1}{R+M} \left( \frac{1}{\kappa_{out}} - \frac{1}{\kappa_m} \right) \right] + R.T  \) </p>
+<p>\(\Large \begin{align*} C_3 &amp;=   \frac{p  H^3}{3} \left[ -\frac{1}{ \kappa_{in} R} + \frac{1}{\kappa_m R} + \frac{1}{R+M} \left( \frac{1}{\kappa_{out}} - \frac{1}{\kappa_m} \right) \right] + R.T  \\<br />
+&amp;=   \frac{p  H^3}{3} \left[ \frac{1}{R} \left( \frac{1}{\kappa_m}-\frac{1}{ \kappa_{in}} \right)  + \frac{1}{R+M} \left( \frac{1}{\kappa_{out}} - \frac{1}{\kappa_m} \right) \right] + R.T \end{align*} \) </p>
+<p>\(\Large    \begin{align*} T_{in} &amp;= \frac{p  H^3}{3 \kappa_{in}} \frac{1}{r} +\frac{p  H^3}{3} \left[ \frac{1}{R} \left( \frac{1}{\kappa_m}-\frac{1}{ \kappa_{in}} \right)  + \frac{1}{R+M} \left( \frac{1}{\kappa_{out}} - \frac{1}{\kappa_m} \right) \right] + R.T \\<br />
+&amp;= \frac{p  H^3}{3} \left[ \frac{1}{\kappa_{in} r}+\frac{1}{R} \left( \frac{1}{\kappa_m}-\frac{1}{ \kappa_{in}} \right)  + \frac{1}{R+M} \left( \frac{1}{\kappa_{out}} - \frac{1}{\kappa_m} \right) \right] + R.T \end{align*} \) </p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p><span class="X-Large-Blue">球の内側（発熱源）の熱拡散方程式</span></p>
+<p>\(\Large   T_h = -\frac{1}{6} \frac{p}{\kappa_h} r^2 + C_1  \) </p>
+<p>\(\Large  T_{h} (H) = T_{in} (H) \) </p>
+<p>より，</p>
+<p>\(\Large   -\frac{1}{6} \frac{p}{\kappa_h} H^2 + C_1 = \frac{p  H^3}{3} \left[ \frac{1}{\kappa_{in} H}+\frac{1}{R} \left( \frac{1}{\kappa_m}-\frac{1}{ \kappa_{in}} \right)  + \frac{1}{R+M} \left( \frac{1}{\kappa_{out}} - \frac{1}{\kappa_m} \right) \right] + R.T  \) </p>
+<p>\(\Large    \begin{align*} C_1 &amp;= \frac{1}{6} \frac{p}{\kappa_h} H^2 + \frac{p  H^3}{3} \left[ \frac{1}{\kappa_{in} H}+\frac{1}{R} \left( \frac{1}{\kappa_m}-\frac{1}{ \kappa_{in}} \right)  + \frac{1}{R+M} \left( \frac{1}{\kappa_{out}} - \frac{1}{\kappa_m} \right) \right] + R.T  \\<br /> 
+  &amp;= \frac{pH^2}{6} \left( \frac{1}{\kappa_h} + \frac{2}{\kappa_{in}} \right) +
+ \frac{p  H^3}{3} \left[ \frac{1}{\kappa_{in} H}+\frac{1}{R} \left( \frac{1}{\kappa_m}-\frac{1}{ \kappa_{in}} \right)  + \frac{1}{R+M} \left( \frac{1}{\kappa_{out}} - \frac{1}{\kappa_m} \right) \right] + R.T \end{align*} \) </p>
+<p>\(\Large   T_h = -\frac{1}{6} \frac{p}{\kappa_h} r^2 + \frac{pH^2}{6} \left( \frac{1}{\kappa_h} + \frac{2}{\kappa_{in}} \right) +
+\frac{p  H^3}{3} \left[ \frac{1}{\kappa_{in} H}+\frac{1}{R} \left( \frac{1}{\kappa_m}-\frac{1}{ \kappa_{in}} \right)  + \frac{1}{R+M} \left( \frac{1}{\kappa_{out}} - \frac{1}{\kappa_m} \right) \right] + R.T  \) </p>
+<p>となります．</p>
+<p>&nbsp;</p>
+<p class="X-Large-Blue">まとめ</p>
+<p>\(\Large   T_{out} =   \frac{p \ H^3}{3 \kappa_{out}} \frac{1}{r} + R.T  \) </p>
+<p>\(\Large    T_m = \frac{p  H^3}{3} \left[ \frac{1}{\kappa_m r} + \frac{1}{R+M} \left( \frac{1}{\kappa_{out}} - \frac{1}{\kappa_m} \right) \right] + R.T \) </p>
+<p>\(\Large    T_{in} = \frac{p  H^3}{3} \left[ \frac{1}{\kappa_{in} r}+\frac{1}{R} \left( \frac{1}{\kappa_m}-\frac{1}{ \kappa_{in}} \right)  + \frac{1}{R+M} \left( \frac{1}{\kappa_{out}} - \frac{1}{\kappa_m} \right) \right] + R.T  \) </p>
+<p>\(\Large   T_h = -\frac{1}{6} \frac{p}{\kappa_h} r^2 + \frac{pH^2}{6} \left( \frac{1}{\kappa_h} + \frac{2}{\kappa_{in}} \right) +
+  \frac{p  H^3}{3} \left[ \frac{1}{\kappa_{in} H}+\frac{1}{R} \left( \frac{1}{\kappa_m}-\frac{1}{ \kappa_{in}} \right)  + \frac{1}{R+M} \left( \frac{1}{\kappa_{out}} - \frac{1}{\kappa_m} \right) \right] + R.T  \) </p>
+<p>となります．</p>
+<p>次に，具体的な値を入れてみましょう．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="heat-31.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="heat-33.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
