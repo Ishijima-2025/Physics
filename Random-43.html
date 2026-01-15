@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Random-43</title>
+<link href="090413.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style1 {color: #0000FF}
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<h1 class="style1">単粒子解析からの拡散定数の見積もり方-04</h1>
+<p>具体的な作業としては，5ポイントのデータがある場合，<br />
+　<span class="Large-Bold-RED">１，２，３，４，５</span></p>
+<p>間隔１：<span class="Large-Bold-RED">１と２，２と３，３と４，４と５</span><br />
+  間隔２：<span class="Large-Bold-RED">１と３，２と４，３と５</span><br />
+  間隔３：<span class="Large-Bold-RED">１と４，２と５</span><br />
+  間隔４：<span class="Large-Bold-RED">１と５</span></p>
+<p>の差分の二乗を計算すればいいことになります．<br />
+計算は，</p>
+<table width="360" border="1">
+  <tr>
+    <td width="50">&nbsp;</td>
+    <td width="48">&nbsp;</td>
+    <td colspan="5"><div align="center">データ</div></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><div align="center"></div></td>
+    <td width="38"><div align="center">1</div></td>
+    <td width="44"><div align="center">2</div></td>
+    <td width="44"><div align="center">3</div></td>
+    <td width="44"><div align="center">4</div></td>
+    <td width="46"><div align="center">5</div></td>
+  </tr>
+  <tr>
+    <td rowspan="5"><p>デ</p>
+    <p>ー</p>
+    <p>タ</p></td>
+    <td><div align="center">1</div></td>
+    <td><div align="center"></div></td>
+    <td class="Large-Red"><div align="center"><strong>1</strong></div></td>
+    <td class="Large-Red"><div align="center"><strong>2</strong></div></td>
+    <td class="Large-Red"><div align="center"><strong>3</strong></div></td>
+    <td class="Large-Red"><div align="center"><strong>4</strong></div></td>
+  </tr>
+  <tr>
+    <td><div align="center">2</div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td class="Large-Red"><div align="center"><strong>1</strong></div></td>
+    <td class="Large-Red"><div align="center"><strong>2</strong></div></td>
+    <td class="Large-Red"><div align="center"><strong>3</strong></div></td>
+  </tr>
+  <tr>
+    <td><div align="center">3</div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td class="Large-Red"><div align="center"><strong>1</strong></div></td>
+    <td class="Large-Red"><div align="center"><strong>2</strong></div></td>
+  </tr>
+  <tr>
+    <td><div align="center">4</div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td class="Large-Red"><div align="center"><strong>1</strong></div></td>
+  </tr>
+  <tr>
+    <td><div align="center">5</div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+  </tr>
+</table>
+<p>この表のように（黒字がデータ番号，赤字は計算する場所で，数字は間隔），全ての組み合わせは必要なく，赤字の部分のみの計算となります．<br />
+この間隔ごとの平均を出せばいいのです．</p>
+<p>ここで，<br />
+  間隔が長くなると得られるデータ数が少なくなる<br />
+  と言うことに注意してください．つまり，<br />
+  間隔１：４データ<br />
+  間隔２：３データ<br />
+  間隔３：２データ<br />
+  間隔４：１データ<br />
+となっていますね．</p>
+<p>次に，MSDプロット，を使う場合での注意点を示します．</p>
+<p><br />
+</p>
+<p><span class="style7"><a href="Random-42.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="kenkyu.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span> <a href="Random-44.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+</body>
+</html>

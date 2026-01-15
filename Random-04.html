@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>無題ドキュメント</title>
+<style type="text/css">
+<!--
+.style1 {font-size: large;
+	color: #0000FF;
+}
+.style16 {color: #0000FF; font-weight: bold; }
+.style13 {color: #0000FF}
+.style7 {color: #000000; }
+.style17 {font-size: x-large}
+.style18 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style20 {
+	font-size: x-large;
+	color: #FF0000;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body>
+<h1><span class="style13">一次元拡散運動（分散）</span></h1>
+<p>さて，先のルール１では，<br />
+    <span class="style1">　１．各粒子は速度ｖでτ秒ごとにδ＝ｖτだけ，右か左に移動する<br />
+        </span>でしたね．つまり，<br />
+    <span class="style16">　時刻ｔにおいては，ｔ＝ｎτ<br />
+      その際の，ステップ数はｎ</span><br />
+  と言うことになります．<br />
+  書き換えると，</p>
+<p><img src="Random-08.gif" width="224" height="128" /></p>
+<p>となり，さらに，</p>
+<p><img src="Random-09.gif" width="90" height="66" /></p>
+<p>とすると，</p>
+<p><img src="Random-10.gif" width="138" height="48" /></p>
+<p>という有名な拡散の式を導き出すことができるのです．<br />
+ここで，<span class="style20">Ｄ，を拡散定数</span>，と呼びます．<br />
+次元は，<br />
+  <span class="style17">　<span class="style18">m<sup>2</sup>/s</span></span><br />
+となります．<br />
+適当に決めたステップの間隔，δ，とステップの時間，τ，がなんであの有名な拡散定数になるの？と言う疑問は後ほどに．</p>
+<p>この拡散方程式で一番重要なことは，<br />
+  <span class="style20">　平均自乗変位（長さの自乗の次元）が時間に比例する</span><br />
+と言うことです．<br />
+  <span class="style1">　距離（長さの次元）と時間が比例する</span><br />
+訳ではないのです．<br />
+グラフで表すと，</p>
+<p><img src="Random-02.jpg" width="435" height="391" /></p>
+<p>となり，時間と自乗平均変位とが比例関係にあり，その傾きは，<br />
+　２Ｄ<br />
+となります．<br />
+何で，Ｄにしなかったの？２が余計？<br />
+追々説明します．</p>
+<p>当然ながら，平均の移動距離は，</p>
+<p><img src="Random-03.jpg" width="435" height="391" /></p>
+<p>となりますね．</p>
+<p>では，なぜ，Ｄでなくて，２Ｄなのか，そもそもＤの物理的な意味は何なのか，を次ページで説明しましょう．<br />
+と言っても，これはバーグのランダムウォークの説明を記述したものなので，正確には，ランダムウォークを見てください．</p>
+<p><span class="style7"><a href="Random-03.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="kenkyu.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Random-05.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+</body>
+</html>

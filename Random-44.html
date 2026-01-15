@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Random-44</title>
+<link href="090413.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style1 {color: #0000FF}
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<h1 class="style1">単粒子解析からの拡散定数の見積もり方-05</h1>
+<p>実際の実験結果ではなく，コンピュータ上での理想的な場合のシミュレーションで試してみましょう．<br />
+　拡散定数：1000um2/s<br />
+　τ：1ms<br />
+　観測時間：１s（つまり1000ポイント）<br />
+　試行回数：10回</p>
+<p>その結果がこちらです．</p>
+<p><img src="Random-53.jpg" alt="" width="389" height="352" /></p>
+<p>まあ，なんとばらけていること！<br />
+赤の太線が10回試行の平均値で，何とか直線に近いですが，それ以外はばらばらです．<br />
+これはつまり，<br />
+　<span class="Large-Bold-RED">時間間隔が長いほど，二乗平均の求める値がばらつく</span><br />
+と言うのものです．原点に近いところを見ると，</p>
+<p><img src="Random-54.jpg" width="388" height="326" /></p>
+<p>まあまあ，全てのカーブがまあ平均値（赤の点線）と同様の直線になっていることがわかります．<br />
+従って，<br />
+　<span class="X-Large-RED">MSDプロットを解析する場合，原点近くのみ信頼がおける</span><br />
+こととなります．</p>
+<p>この解析は，一次元，二次元，三次元，回転拡散，などどれにも適用できますので参考になさってください．<br />
+</p>
+<p><span class="style7"><a href="Random-43.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="kenkyu.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span></p>
+</body>
+</html>

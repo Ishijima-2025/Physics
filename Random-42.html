@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Random-42</title>
+<link href="090413.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style1 {color: #0000FF}
+.style2 {font-size: large;
+	color: #0000FF;
+}
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<h1 class="style1">単粒子解析からの拡散定数の見積もり方-03</h1>
+<p>実際には，二次元での実験が多いと思いますが，ここでは単純に一次元での場合を考えましょう．<br />
+モデルとしては，<a href="Random-02.html">こちら，</a>にあるように，</p>
+<p><img src="Random-01.jpg" width="535" height="261" /></p>
+<p>一回ごとにサイコロを振り，右か左かどちらかに移動する，という系を考えます．<br />
+このシミュレーション（モンテカルロ？）を行うと，以下のようなトレースを得ることができます．</p>
+<p><img src="Random-51.jpg" alt="" width="708" height="243" /></p>
+<p>ここで，重要なのは，<br />
+　1ステップごとの時間間隔　：　τ<br />
+　1ステップの大きさ　　　　　：　δ<br />
+であり，</p>
+<p><img src="Random-09.gif" width="90" height="66" /></p>
+<p>の関係があります．</p>
+<p>一次元の拡散の式は，</p>
+<p><img src="Random-10.gif" width="138" height="48" /></p>
+<p>ですので，上の関係式との関係は，δ<sup>2</sup>＝&lt;x<sup>2</sup>(t)&gt;，ｔ＝τとなりますね．<br />
+つまり，<br />
+　ある時間間隔τ（もしくはｔ）離れた2点の距離はどの程度か<br />
+というと言う問いかけになるわけです．<br />
+</p>
+<p><img src="Random-52.jpg" width="708" height="243" /></p>
+<p>ここで重要なのは，<br />
+　<span class="Large-Bold-RED">開始地点は何処でもいい</span><br />
+です，上の赤矢印にあるように，ある時間間隔，ｔ，は基本的には何処でもいいのです．<br />
+ただ，それぞればらつきがありますので，たくさんの地点で計算して，二乗平均をとる必要があります．</p>
+<p>じゃあ，どうやって，ｔ，を決めたらいいの？という疑問がわくかもしれませんが，それは，<br />
+  <span class="Large-Bold-RED">　いろいろな間隔をとってプロットすればいい</span><br />
+というのが答えになります．</p>
+<p>それが，<a href="Random-04.html">ここ</a>，にあるようなMSDプロットとなります．</p>
+<p><img src="Random-02.jpg" width="435" height="391" /></p>
+<p>この方向きが，２D（一次元の場合），となります．</p>
+<p>では，具体的にはどのような手順を踏めばよいでしょう？</p>
+<p><span class="style7"><a href="Random-41.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="kenkyu.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Random-43.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+</body>
+</html>

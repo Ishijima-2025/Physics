@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Random-51</title>
+<style type="text/css">
+<!--
+.style1 {color: #0000FF}
+.style10 {color: #000000; }
+.style3 {
+	color: #FF0000;
+	font-size: large;
+	font-weight: bold;
+}
+-->
+</style>
+<link href="130819.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1 class="style1">MSDプロットで原点を通らない場合-01</h1>
+<p class="Large-Bold-Blue">&nbsp;</p>
+<p>実験結果を<a href="Random-42.html">MSDプロット</a>で解析した場合（特に時系列の解析の場合），得られたプロットを直線近似してその方向きから拡散係数を求めます．<br />
+さて，その際の近似を行う場合，<br />
+<span class="Large-Bold-Red">　y　=　ax+b<br />
+　y　=　ax</span><br />
+皆さんどちらで近似を行うでしょう？</p>
+<p>MSDプロットは当然原点を通るのですから，どちらの近似でも同じ結果が出てくると思いがちですが，実は実験結果を解析すると必ずしも原点を通らない場合も多々見受けられます．<br />
+理想的には，</p>
+<p><img src="Random-51.png" width="278" height="272" /></p>
+<p>のようなきれいな解析結果となるわけですが，</p>
+<p><img src="Random-52.png" width="278" height="273" /></p>
+<p>のような結果が．．．．</p>
+<p>dt=0，の場合原点にプロットされる理由に関しては，<a href="Random-43.html">ここ</a>，での解析手法に書かれているように，ある時間差の値の差分（の二乗）を解析するわけですから，<br />
+　dt=0<br />
+というのは，自分を自分自身で引き算する，ことになり，どんなデータでもその値（さらには平均）は，０，となります．<br />
+問題は，dt≠0，の値がなぜ原点を通る直線で近似できないか，です．</p>
+<p>一つの可能性として，制限のある拡散，とくにあるエリア内に閉じ込められた拡散の場合は，MSDプロットは直線とならずそのカーブは寝てきます．</p>
+<p><img src="Random-53.png" width="298" height="272" /></p>
+<p>この導出方法の詳細は，<a href="http://www.cell.com/biophysj/abstract/S0006-3495%2893%2981253-0" target="_blank">楠見先生の論文</a>，をご覧ください．<br />
+しかし，この場合でも原点の周囲では直線で近似できることとなり，上記の問題の説明となっておりません．</p>
+<p>一つの可能性と手上げられるのが，<br />
+　<span class="Large-Bold-Red">拡散運動以外にノイズ成分を含む場合</span><br />
+に上記のような原点を通らないプロットとなります．</p>
+<p>では，その大きさ（Y切片）はどのような大きさになるかを検討しましょう．</p>
+<p>ここで，重要なことは，<br />
+　　<span class="Red-Bold">ノイズ成分が含まれている　→　MSDプロットが原点を通らな</span>い<br />
+であって，<br />
+　<span class="Blue-Bold">MSDプロットが原点を通らない　＝　ノイズ成分が含まれている，ではない</span><br />
+ことです．<br />
+他にも原点を通らない原因はあると思われますので，今回の考え方は必要十分条件を満たしておりません．<br />
+短絡的に，<br />
+　ノイズ成分が含まれているからだ<br />
+と結論を出すことは未知なるおもしろい大発見を見逃す恐れがあります．</p>
+<p>次のページからその大きさの導出方法を考えていきましょう．</p>
+<p>&nbsp;</p>
+<p><span class="style10"><a href="kenkyu.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Random-52.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+</body>
+</html>
