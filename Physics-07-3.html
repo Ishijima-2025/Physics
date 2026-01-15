@@ -1,0 +1,150 @@
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>Permutations, combinations</title>
+</head>
+
+
+
+<body>
+<h1 class="X-Large-Bold-RED">・遠心力-位置ベクトル・速度ベクトル・加速度ベクトル</h1>
+<p class="Large-Bold-Red"><br />
+  ・位置ベクトル</p>
+<p>原点 O を中心とした半径 r の円周上を角速度 ω で等速円運動する質点の位置 r=(x,y) の各成分は</p>
+<p>\( \Large           \displaystyle x(t) = r \cdot cos ( \omega \cdot t + \theta_0) \)</p>
+<p>\( \Large           \displaystyle y(t) = r \cdot sin ( \omega \cdot t + \theta_0) \)</p>
+<p>となります．</p>
+<p>&nbsp;</p>
+<p class="Large-Bold-Red">・速度ベクトル</p>
+<p>速度は，</p>
+<p>\( \Large           \displaystyle v_x (t) = \frac{dx}{dt} = - \omega \cdot r \cdot sin ( \omega \cdot t + \theta_0) \)</p>
+<p>\( \Large           \displaystyle v_y (t) = \frac{dy}{dt} = \omega \cdot r \cdot cos ( \omega \cdot t + \theta_0) \)</p>
+<p>です．位置ベクトルｒと速度ベクトルｖの内積は，</p>
+<p>\( \Large           \displaystyle \vec{ r} \cdot \vec{v} =  r \cdot cos ( \omega \cdot t + \theta_0) \{ - \omega \cdot r \cdot sin ( \omega \cdot t + \theta_0) \} <br>
++ r \cdot sin ( \omega \cdot t + \theta_0) \{ \omega \cdot r \cdot cos ( \omega \cdot t + \theta_0 ) \} \)</p>
+<p>\( \Large           \displaystyle  =  - r^2 \cdot  \omega \cdot sin ( \omega \cdot t + \theta_0) \cdot cos ( \omega \cdot t + \theta_0) + r^2 \cdot  \omega \cdot sin ( \omega \cdot t + \theta_0) \cdot cos ( \omega \cdot t + \theta_0) \)</p>
+<p>\( \Large           \displaystyle  =   0 \)</p>
+<p>より，速度  v は位置 r （動径方向）と直交し，接線方向を向いていることになります．</p>
+<p>&nbsp;</p>
+<p class="Large-Bold-Red">・加速度ベクトル</p>
+<p>加速度は，</p>
+<p>\( \Large           \displaystyle \alpha_x (t) = \frac{d v_x}{dt} = - \omega^2 \cdot r \cdot cos ( \omega \cdot t + \theta_0) = - \omega^2 \cdot x\)</p>
+<p>\( \Large           \displaystyle \alpha_y (t) = \frac{d v_y}{dt} = - \omega^2 \cdot r \cdot sin ( \omega \cdot t + \theta_0) = - \omega^2 \cdot y\)</p>
+<p>となり，位置ベクトルとは逆の向きとなります．</p>
+<p>速度ベクトルvと加速度ベクトルαの内積は，</p>
+<p>\( \Large           \displaystyle \vec{ v} \cdot \vec{ \alpha} =  - \omega \cdot r \cdot sin ( \omega \cdot t + \theta_0) \{ - \omega^2 \cdot r \cdot cos ( \omega \cdot t + \theta_0) \} <br>
+  +  \omega \cdot r \cdot cos ( \omega \cdot t + \theta_0) \{ - \omega^2 \cdot r  \cdot sin ( \omega \cdot t + \theta_0 \} \)</p>
+<p>\( \Large           \displaystyle  =   r^2 \cdot  \omega^3 \cdot sin ( \omega \cdot t + \theta_0) \cdot cos ( \omega \cdot t + \theta_0) - r^2 \cdot  \omega^3 \cdot sin ( \omega \cdot t + \theta_0) \cdot cos ( \omega \cdot t + \theta_0) \)</p>
+<p>\( \Large           \displaystyle  =   0 \)</p>
+<p>&nbsp;</p>
+<p>となり，速度ベクトルｖと加速度ベクトルαは直交していることになります．<br>
+また，加速度の大きさは，</p>
+<p>\( \Large           \displaystyle  \vec{\alpha} =   \sqrt{ \alpha_x^2 + \alpha_y^2 } = \sqrt{ ( - \omega^2 \cdot x)^2 +  ( - \omega^2 \cdot y)^2} = \omega^2 \cdot \vec{r} \)</p>
+<p>と遠心力を導き出すことができます．</p>
+<p>&nbsp;</p>
+<p class="Large-Bold-Red">・位置ベクトル，速度ベクトル，加速度ベクトルと象限</p>
+<p class="Large-Bold-Red"><img src="Physics-07-3.png" width="510" height="398" alt=""/></p>
+<p>上で計算したように，</p>
+<p>\( \Large           \displaystyle x(t) = r \cdot cos ( \omega \cdot t + \theta_0) \)</p>
+<p>\( \Large           \displaystyle y(t) = r \cdot sin ( \omega \cdot t + \theta_0) \)</p>
+<p>\( \Large           \displaystyle v_x (t) = - \omega \cdot r \cdot sin ( \omega \cdot t + \theta_0) \)</p>
+<p>\( \Large           \displaystyle v_y (t)  = \omega \cdot r \cdot cos ( \omega \cdot t + \theta_0) \)</p>
+<p>\( \Large           \displaystyle \alpha_x (t) =  - \omega^2 \cdot r \cdot cos ( \omega \cdot t + \theta_0) \)</p>
+<p>\( \Large           \displaystyle \alpha_y (t) =  - \omega^2 \cdot r \cdot sin ( \omega \cdot t + \theta_0) \)</p>
+<p>となりますので，各象限についての極性を考えると，</p>
+<table width="790" border="1">
+  <tbody>
+    <tr>
+      <td height="43" style="text-align: center">象限</td>
+      <td style="text-align: center">x</td>
+      <td style="text-align: center">y</td>
+      <td style="text-align: center">cos</td>
+      <td style="text-align: center">sin</td>
+      <td style="text-align: center">v<sub>x</sub></td>
+      <td style="text-align: center">v<sub>y</sub></td>
+      <td style="text-align: center">α<sub>x</sub></td>
+      <td style="text-align: center">α<sub>y</sub></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td bgcolor="#F3FF00" style="text-align: center">+</td>
+      <td bgcolor="#F3FF00" style="text-align: center">+</td>
+      <td bgcolor="#F3FF00" style="text-align: center">+</td>
+      <td bgcolor="#F3FF00" style="text-align: center">+</td>
+      <td bgcolor="#79FF70" style="text-align: center">-</td>
+      <td bgcolor="#F3FF00" style="text-align: center">+</td>
+      <td bgcolor="#79FF70" style="text-align: center">-</td>
+      <td bgcolor="#79FF70" style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td bgcolor="#79FF70" style="text-align: center">-</td>
+      <td bgcolor="#F3FF00" style="text-align: center">+</td>
+      <td bgcolor="#79FF70" style="text-align: center">-</td>
+      <td bgcolor="#F3FF00" style="text-align: center">+</td>
+      <td bgcolor="#79FF70" style="text-align: center">-</td>
+      <td bgcolor="#79FF70" style="text-align: center">-</td>
+      <td bgcolor="#F3FF00" style="text-align: center">+</td>
+      <td bgcolor="#79FF70" style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td bgcolor="#79FF70" style="text-align: center">-</td>
+      <td bgcolor="#79FF70" style="text-align: center">-</td>
+      <td bgcolor="#79FF70" style="text-align: center">-</td>
+      <td bgcolor="#79FF70" style="text-align: center">-</td>
+      <td bgcolor="#F3FF00" style="text-align: center">+</td>
+      <td bgcolor="#79FF70" style="text-align: center">-</td>
+      <td bgcolor="#F3FF00" style="text-align: center">+</td>
+      <td bgcolor="#F3FF00" style="text-align: center">+</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4</td>
+      <td bgcolor="#F3FF00" style="text-align: center">+</td>
+      <td bgcolor="#79FF70" style="text-align: center">-</td>
+      <td bgcolor="#F3FF00" style="text-align: center">+</td>
+      <td bgcolor="#79FF70" style="text-align: center">-</td>
+      <td bgcolor="#F3FF00" style="text-align: center">+</td>
+      <td bgcolor="#F3FF00" style="text-align: center">+</td>
+      <td bgcolor="#79FF70" style="text-align: center">-</td>
+      <td bgcolor="#F3FF00" style="text-align: center">+</td>
+    </tr>
+  </tbody>
+</table>
+<p>となり，加速度のｘ，ｙの方向は，</p>
+<p>　第一象限　：　マイナス，マイナス</p>
+<p>　第二象限　：　プラス，マイナス</p>
+<p>　第三象限　：　プラス，プラス</p>
+<p>　第四象限　：　マイナス，プラス</p>
+<p>となり，加速度ベクトルは常に円軌道の中心にむかうことになります．</p>
+<p>次は，<span class="Blue-Bold">トルク</span>，です．</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style13"><a href="Physics-07-2.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Physics-08.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+</body>
+</html>

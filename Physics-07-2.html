@@ -1,0 +1,96 @@
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>Permutations, combinations</title>
+</head>
+
+
+
+<body>
+<h1 class="X-Large-Bold-RED">・遠心力</h1>
+<p><br />
+  さて，遠心力，というと，バケツに水を入れてひもをつけてくるくる，というイメージがありますが，どのような力が働くかを考えてみましょう．</p>
+<p><a href="http://www.ravco.jp/cat/view.php?cat_id=3187" target="_blank">このサイト</a>，を参考にしました．</p>
+<p>まずは，<span class="Large-Bold-Red">弧度法</span>，から．<br />
+これは，角度をラジアンではかること，です．つまり，<br />
+　<span class="Red-Bold">一回転＝360°　→　＝２π</span><br />
+とすることです．何でそんなことをするかというと，<br />
+　半径ｒの円の円周は２π<br />
+なので，<br />
+　<span class="Large-Bold-Red">ｒθ＝円弧の長さ</span><br />
+と簡単に描けるからです．</p>
+<p><img src="centrifugal force-01.png" width="261" height="223" /></p>
+<p>次は，<span class="Large-Bold-Red">角速度</span>，です．<br />
+角速度の定義は，<br />
+<span class="Large-Bold-Red">　単位時間あたりの回転角</span><br />
+で表すことができます．つまり，</p>
+<p>\( \Large           \displaystyle \omega = \frac{ \Delta \theta}{ \Delta t} \ [rad/s] \)</p>
+<p>となります．<br />
+等速円運動の場合は，</p>
+<p>\( \Large           \displaystyle \omega = \frac{  \theta}{  t}  \)</p>
+<p>\( \Large           \displaystyle \theta = \omega \cdot t \)</p>
+<p>となります．</p>
+<p>次に，<span class="Large-Bold-Red">円運動</span>，について考えましょう．<br />
+まずは，<br />
+<span class="Blue-Bold">　長さｒ，質量０の糸に結ばれた質量ｍの円運動</span><br />
+を考えましょう．</p>
+<p><img src="centrifugal force-02.png" width="263" height="222" /></p>
+<p>微小時間Δｔ[s]の間に，Δθ[rad]だけ回転した場合，の移動距離Δx[m]は，</p>
+<p>\( \Large           \displaystyle \Delta x = r \cdot \Delta \theta  \)</p>
+<p>速度v[m/s]は，</p>
+<p>\( \Large           \displaystyle v = \frac{ \Delta x}{ \Delta t} = \frac{ r \cdot \Delta \theta}{ \Delta t} = r \cdot \omega  \)</p>
+<p>となる．</p>
+<p>このとき，速度ベクトルは円の接線の方向になるので，<br />
+  <span class="Blue-Bold">　速度ベクトルは刻一刻と変化する＝加速度が生じる</span><br />
+ことになります．また，そのときの，<br />
+<span class="Blue-Bold">　加速度ベクトルは速度ベクトルに直交する</span><br />
+ことになります．</p>
+<p><img src="centrifugal force-03.png" width="256" height="278" /></p>
+<p>速度ベクトルの変化をわかりやすくするために，図を以下のように書き直しましょう．</p>
+<p><img src="centrifugal force-04.png" width="225" height="222" /></p>
+<p>ここで，角速度の大きさは変わらないので，</p>
+<p>\( \Large           \displaystyle \vert \vec{v'} \vert  =\vert \vec{v} \vert  = v \)</p>
+<p>となります．また，加速度は，</p>
+<p>\( \Large           \displaystyle  \vec{ \alpha}   =\frac{ \vec{v'} - \vec{v}}{ \Delta t} \)</p>
+<p>となりますが，最初の弧度法から，</p>
+<p>\( \Large           \displaystyle \vert \vec{v'} - \vec{v} \vert  \simeq v \cdot \Delta \theta \)</p>
+<p>となりますので，</p>
+<p>\( \Large           \displaystyle \alpha = \frac{\vert \vec{v'} - \vec{v} \vert}{ \Delta t} \simeq v \cdot \frac{\Delta \theta}{ \Delta t} = v \cdot \omega \)</p>
+<p>となります．先に述べた速さの関係式を考慮すると，</p>
+<p>\( \Large           \displaystyle \alpha  = v \cdot \omega = r \cdot \omega^2 \)</p>
+<p>となり，働く力，<span class="Large-Bold-Red">遠心力</span>，は，</p>
+<p>\( \Large           \displaystyle F = m \cdot \alpha = m \cdot r \cdot \omega^2 \)</p>
+<p>となります．</p>
+<p>次に，<br>
+  <span class="Blue-Bold">　加速度ベクトルは速度ベクトルに直交する</span><br /> 
+  を検討していきましょう．
+</p>
+<p>&nbsp;</p>
+<p><span class="style13"><a href="Physics-07.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Physics-07-3.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+</body>
+</html>

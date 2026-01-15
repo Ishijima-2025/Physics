@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>無題ドキュメント</title>
+<script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<style type="text/css">
+<!--
+.style1 {
+	color: #0000FF
+}
+.style2 {
+	font-size: x-large;
+	color: #FF0000;
+}
+.style3 {
+	font-size: x-large;
+	color: #0000FF;
+}
+.style5 {color: #0000FF; font-size: large; }
+.style13 {color: #000000; }
+-->
+</style>
+</head>
+
+<body>
+<h1 class="style1">粘性抵抗からのトルクの見積もり</h1>
+<p>さて，<span class="style3">運動方程式</span>の項で，<span class="style2">慣性力，粘性力，弾性力</span>をまとめて運動方程式を記述しましたが，つまりこの三つは同じ働きをするものとも考えていいのです．<br />
+つまり，上の設定では，慣性力だったのを，弾性力，粘性力，で置き換えてもいいのです．<br />
+では，<span class="style2">粘性力</span>で置き換えてみましょう．<br />
+先ほどは，Rだけ離れたところにおもりをつけましたが，今回は，おもりではなく，球体をつけて周囲の粘性抵抗を受けるようにしましょう．</p>
+<p><img src="Physics-07.jpg" width="341" height="277" /></p>
+<p>  すると，式は以下になります．</p>
+<p><img src="Physics-18.gif" width="264" height="42" /></p>
+<p>ここで，半径Rを周回する物体の速度はどう計算すればよいでしょう？<br />
+  <span class="style5">半径Rの円周は，２πR</span>．<br />
+そこを<span class="style5">１秒間にｆ周回る</span>とすると，</p>
+<p><img src="Physics-19.gif" width="181" height="42" /></p>
+<p>さらに，<span class="style5">半径ｒの球体の場合の粘性抵抗係数</span>は，</p>
+<p><img src="Physics-20.gif" width="170" height="45" /></p>
+<p>となるので，</p>
+<p><img src="Physics-21.gif" width="368" height="154" /></p>
+<p>となります．<br />
+ここで，ωは角速度です．</p>
+<p>ここでもう一つ重要なファクターが．<br />
+  それは<span class="style3">物体の自転運動</span>．<br />
+  今までは，回転中心を周回する物体の，いわば，公転運動を見ていたのですが，もう一つ，回転中心を１周する間に自転運動もするのです．</p>
+<p>&nbsp;</p>
+<p>このように，中心から離れて固定されながら回転する物体は１周する間に，自分も一周します．<br />  
+この自転において，物体を自転させるのに必要なトルクは，</p>
+<p><img src="Physics-22.gif" width="226" height="82" /></p>
+<p>&nbsp;</p>
+<p>となります．<br />
+これは並進運動の，</p>
+<p><img src="Physics-23.gif" width="120" height="42" /></p>
+<p>と対応します．<br />
+  <span class="style5">球体の場合の，回転の粘性抵抗係数は</span>，</p>
+<p><img src="Physics-24.gif" width="266" height="50" /></p>
+<p>となり，<span class="style5">回転の時間微分は角速度</span>となるので，</p>
+<p><img src="Physics-25.gif" width="234" height="50" /></p>
+<p>となります．<br />
+二つをあわせて，</p>
+<p><img src="Physics-26.gif" width="474" height="117" /></p>
+<p>となります．</p>
+<p>このように，<br />
+  <span class="style5">　 回転する球体の半径，ｒ<br />　
+    回転の大きさ，R<br />　
+    角速度，ω<br />　
+    溶液の粘度，η</span><br />
+から，回転体の発生するトルクを見積もることができます．</p>
+<p><span class="style13"><a href="Physics-08.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="index.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+</body>
+</html>
