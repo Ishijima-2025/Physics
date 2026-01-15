@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Material-01</title>
+<style type="text/css">
+<!--
+.style1 {color: #0000FF}
+.style10 {color: #000000; }
+.style3 {
+	color: #FF0000;
+	font-size: large;
+	font-weight: bold;
+}
+-->
+</style>
+<link href="130819.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1 class="style1">材料力学の基礎-01</h1>
+<p class="Large-Bold-Blue">&nbsp;</p>
+<p><span class="Large-Bold-Red">材料力学</span>．．．．．．生命科学と何にも関係ない分野，のような気がしますが，タンパク質，ヌクレオチドだって立派な材料です．<br />
+ですので，材料力学もきちんと理解しましょう．<br />
+ただ．．．にわか勉強なので．．．．若干いい加減かもしれません．．．ご容赦を．．</p>
+<p>参考にしたサイトは，<br />
+　<a href="http://www.structure.jp/column14/column14_1_1.html" target="_blank">株式会社ストラクチャー</a><br />
+　<a href="http://kentiku-kouzou.jp/kenkyu.html" target="_blank">建築学生が学ぶ「構造力学」</a><br /> 
+　<a href="http://jikosoft.com/kenkyu.html" target="_blank">CAE技術者のための情報サイト</a><br />
+などです，ありがとうございます．</p>
+<p>まずは，材料力学の基礎となる用語を整理していきましょう．</p>
+<p><span class="X-Large-Bold-Blue">・応力</span></p>
+<p>応力とは，<br />
+  <span class="Red-Bold">単位面積あたりに作用する力</span><br />
+  を指します．具体的には，</p>
+<p><img src="Material-01.jpg" width="162" height="395" /></p>
+<p>この図のようになります．数式で考えると，</p>
+<p><img src="Material-01.gif" width="70" height="62" /></p>
+<p>となり，次元は，N/m<sup>2</sup>，となります．圧力の次元と一緒ですね（ヤング率も）．</p>
+<p class="X-Large-Bold-Blue">・ひずみ</p>
+<p>ひずみとは，<br />
+　<span class="Red">外力により形状が変化した場合のその割合</span><br />
+と考えることができます．</p>
+<p><img src="Stress.jpg" width="368" height="194" /></p>
+<p>数式で表すと，</p>
+<p><img src="Material-02.gif" width="134" height="68" /></p>
+<p>となります．このひずみ，ε，は無次元となります．</p>
+<p class="X-Large-Bold-Blue">・ヤング率</p>
+<p>さて，上記の，応力とひずみ，両者は大いに関係があります．<br />
+ある材料に力を加えたときのひずみが生じますが，このひずみの量が応力に比例する場合，<span class="Red-Bold">弾性</span>，と呼び，その比例係数を，<span class="Red-Bold">ヤング率</span>，と呼びます．<br />
+数式で表すと，</p>
+<p><img src="Material-03.gif" width="64" height="62" /></p>
+<p>となります．σの次元は，N/m<sup>2</sup>，εの次元は無次元なので，ヤング率，E，の次元は，N/m<sup>2</sup>，となります．</p>
+<p class="X-Large-Bold-Blue">・曲げモーメント</p>
+<p>物質に与えられる力は，圧縮，伸張，だけではなく，曲げ，にも作用します．<br />
+そこで用いられる単語が，<br />
+　モーメント<br />
+であり，荷重，と距離に依存します．</p>
+<p><img src="Material-02.jpg" width="418" height="235" /><br />
+数式で表すと，  </p>
+<p><img src="Material-04.gif" width="96" height="32" /></p>
+<p>となり，次元は，Nm，となります．トルクと同じ次元ですね．</p>
+<p>次ページから，<br />
+　断面一次モーメント<br />
+　断面二次モーメント<br />
+について説明していきます．</p>
+<p><span class="style10"><a href="kenkyu.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Material-02.html"><img src="R-arrow.png" alt="r" width="57" height="34" border="0" /></a></p>
+</body>
+</html>

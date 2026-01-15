@@ -1,0 +1,75 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>moment of inertiamoment of inertia</title>
+<link href="250219.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+	
+
+
+
+
+<title>Laplace</title>
+</head>
+
+<body>
+<p class="Red-Large-Bold">慣性モーメント</p>
+<p class="Blue-Large-Bold">平行軸の定理の検証</p>
+<p class="Blue-Large-Bold">棒の場合</p>
+<p>&nbsp;</p>
+<p class="Blue-Large">・棒の場合-斜め_02</p>
+<p><img src="moment of inertia-17.png" width="582" height="474" alt=""/></p>
+<p>&nbsp;</p>
+<p>斜めの棒の場合を考えます．<span class="Red-Bold">回転軸に対して角度θ</span>で斜めとなる場合です．</p>
+<p>上の図は<span class="Red">回転軸上から見た図</span>となります</p>
+<p>長さ2aの棒の両端の座標は，回転中心を原点とすると， </p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle ( R + a \ cos \theta, a \ sin \theta )\)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle ( R - a \ cos \theta, -a \ sin \theta)\)</span></p>
+<p>ので，回転軸からの棒の各位置の座標は，<span class="Red">ｘ座標だけを考えればいい</span>ので，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle x =  R + s \ cos \theta \)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle ( -a  \leq s \leq a )\)</span></p>
+<p>&nbsp;</p>
+<p>線の場合の密度の定義は，<span class="Red">線密度として，長さ２aの場合</span>， </p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle M= 2a \rho \)</span></p>
+<p>ですので，慣性モーメントは，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  J =  \int_{-a}^a \left(  R + s \ cos \theta  \right)^2 \rho \ ds \)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  J =  \int_{-a}^a \left(  R^2 + 2 R \ s \ cos \theta + s^2 \right) \rho \ ds \)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  J =   \rho \ \left[ R^2s + Rs^2 \ cos \theta + \frac{s^3}{3} \ cos^2 \theta \right]_{-a}^a \)</span></p>
+<p>第二項は０となるので，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  J =   \rho \ \left[ R^2s  + \frac{s^3}{3} \ cos^2 \theta \right]_{-a}^a \)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  J =   \rho \ \left[ 2R^2a  + \frac{2 a^3}{3} \ cos^2 \theta \right] \)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  J =\frac{M}{2a} \ \left[ 2R^2a  + \frac{2 a^3}{3} \ cos^2 \theta \right] \)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  J =MR^2  + \frac{1}{3} Ma^2 \ cos^2 \theta \)</span></p>
+<p>となり，第一項が<a href="moment of inertia-06.html">平行軸の定理</a>，第二項が<a href="moment of inertia-03.html">重心を中心に回転する斜めの棒の慣性モーメント</a>となり，平行軸の定理と一致します．</p>
+<p>&nbsp;</p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p>次ページは，<span class="Blue-Large-Bold">円板（団扇）の平行軸の定理の検証</span>，を検討していきます．</p>
+<p class="Red-Bold">&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="moment of inertia-07.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a><a href="kenkyu.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="moment of inertia-09.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

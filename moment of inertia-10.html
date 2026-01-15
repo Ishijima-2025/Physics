@@ -1,0 +1,80 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>moment of inertiamoment of inertia</title>
+<link href="250219.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+	
+
+
+
+
+<title>Laplace</title>
+</head>
+
+<body>
+<p class="Red-Large-Bold">慣性モーメント</p>
+<p class="Blue-Large-Bold">平行軸の定理の検証</p>
+<p class="Blue-Large-Bold">&nbsp;</p>
+<p class="Blue-Large">・球の場合</p>
+<p><img src="moment of inertia-20.png" width="841" height="300" alt=""/></p>
+<p><span class="Red-Bold">球</span>の場合，<span class="Blue-Bold">棒の慣性モーメントの求め方が基本</span>となりますが，前ページの円板（水平）を元に計算していきます．</p>
+<p>密度を導入する前の円板（水平）の慣性モーメントは，上左図のように，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  J_{disk} =  \rho \left[  \pi d^2 R^2  + \frac{ \pi}{2} R^4  \right] \)</span></p>
+<p>となりますが，90度回転させて，回転軸を横から見ると，この<span class="Red-Bold">Rがｗによって変わる</span>ので，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle \sqrt{ R^2 - w^2} \)</span>，としてーRからRまで積分することになります．</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  J_{sphere} =  \rho \int_{-R}^R \left[  \pi ( \sqrt{ R^2 - w^2})^2d^2   + \frac{ \pi}{2} ( \sqrt{ R^2 - w^2})^4  \right] \ dw\)</span></p>
+<p>を計算すればいいことになります．第一項と第二項に分けて考えます．</p>
+<p>&nbsp;</p>
+<p class="Blue-Large">・第一項</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  J_{1} =   \pi d^2 \int_{-R}^R (  R^2 - w^2) \ dw\)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  J_{1} =   2 \pi d^2 \int_{0}^R (  R^2 - w^2) \ dw\)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  J_{1} =   2 \pi d^2 \left[   R^2 w - \frac{1}{3} w^3 \right]_0^R \)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  J_{1} =   2 \pi d^2 \left[   R^3  - \frac{1}{3} R^3 \right] \)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  J_{1} =   2 \pi d^2  \frac{2}{3} R^3 = \frac{4}{3} \pi d^2 R^3\)</span></p>
+<p>&nbsp;</p>
+<p class="Blue-Large">・第二項</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  J_{2} =  \frac{ \pi}{2}\int_{-R}^R     (  R^2 - w^2 )^2   \ dw\)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle   =  2 \ \frac{ \pi}{2}\int_{0}^R     (  R^4 - 2 R w^2 + w^4)   \ dw\)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle   =  \pi \left[ R^4w - 2 R \frac{1}{3} w^3 + \frac{1}{5} w^5 \right]_0^R\)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle   =  \pi \left[ R^5 -  \frac{2}{3} R^5 + \frac{1}{5} R^5 \right] \)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle   =  \pi \left[ \frac{15}{15} R^5 -  \frac{10}{15} R^5 + \frac{3}{15} R^5 \right] \)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle   =  \frac{8}{15} \pi  R^5  \)</span></p>
+<p>&nbsp;</p>
+<p>まとめると，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  J_{sphere} =  \rho  \left[  \frac{4}{3} \pi d^2 R^3 +   \frac{8}{15} \pi  R^5  \right] \)</span></p>
+<p>球の質量は体積密度ρを使って，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle M =  \frac{4}{3} \pi \rho  R^3 \)</span></p>
+<p>となるので，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  J_{sphere} =  \frac{3}{4} \frac{M}{ \pi R^3}  \left[  \frac{4}{3} \pi d^2 R^3 +   \frac{8}{15} \pi  R^5  \right] = \boldsymbol{Md^2 + \frac{2}{5} MR^2}\)</span></p>
+<p>となり，第一項が<a href="moment of inertia-06.html">平行軸の定理</a>，第二項が<a href="moment of inertia-04.html">球の慣性モーメント</a>となり，平行軸の定理と一致します．</p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="moment of inertia-09.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a><a href="kenkyu.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

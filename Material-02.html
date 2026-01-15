@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Material-02</title>
+<style type="text/css">
+<!--
+.style1 {color: #0000FF}
+.style10 {color: #000000; }
+.style3 {
+	color: #FF0000;
+	font-size: large;
+	font-weight: bold;
+}
+-->
+</style>
+<link href="130819.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1 class="style1">材料力学の基礎-02</h1>
+<p class="Large-Bold-Blue">&nbsp;</p>
+<p class="X-Large-Bold-Blue">・断面一次モーメント</p>
+<p>ある物体に対する曲げをかんがえていきましょう．<br />
+まずは，ある物体の断面を見てみましょう．</p>
+<p><img src="Material-03.jpg" width="306" height="245" /></p>
+<p>この物体が断面に均等に応力，σ，が働くとします．<br /> 
+　回転軸から，ｙ，離れた微小面積，ｄA，<br />
+に働く曲げモーメントは，</p>
+<p><img src="Material-05.gif" width="142" height="32" /></p>
+<p>となります．<br />
+このうち，σ，を除して，全断面積で積分したもの，</p>
+<p><img src="Material-06.gif" width="110" height="62" /></p>
+<p>を，<span class="Red-Bold">断面一次モーメント</span>，と呼びます．<br />
+この次元は，<span class="Red-Bold">距離×面積，ですので，m<sup>3</sup></span>，となります．曲げモーメントの次元は前ページにあるように，Nm，なので，モーメントと名乗っていても次元が違いますよね．<br />
+これで，ひっかっかってしまったのですが，断面一次モーメントでは，便宜上，モーメント，と名乗っているだけなのかもしれません．</p>
+<p>さて，この断面一次モーメント，もし回転軸が物体の中心にあったなら，</p>
+<p><img src="Material-04.jpg" width="301" height="173" /></p>
+<p>断面一次モーメントの値は０になってしまいますね（積分における，ｙ，の値が正負の値なので）．<br />
+断面の形状が物体の変位にどう関わるかが知りたいので，これでは困ります．<br />
+そこで，登場するのが，断面二次モーメントなのです．</p>
+<p class="X-Large-Bold-Blue"><br />
+・断面二次モーメント</p>
+<p>これは，簡単，単に距離，ｙ，を二乗にしただけです．</p>
+<p><img src="Material-07.gif" width="116" height="62" /></p>
+<p>特徴は，<br />
+　必ず，０以上の値となる<br />
+　次元は，m<sup>4</sup>，となる<br />
+ことです．</p>
+<p>この断面二次モーメントが非常に重要なパラメータとなってきます．<br />
+また，断面の形状によってその値が変わります．<br />
+代表的な例として，断面の形状が，</p>
+<p>・正方形（一片，a）（計算は<a href="Material-02-square.html">ここ</a>)</p>
+<p><img src="Material-08.gif" width="66" height="68" /></p>
+<p>・長方形（幅，ｗ，高さ，ｈ）（計算は<a href="Material-02-square.html">ここ</a>)</p>
+<p><img src="Material-09.gif" width="94" height="68" /></p>
+<p>・円（半径，ｒ）（計算は<a href="Material-02-circle.html">ここ</a>)</p>
+<p><img src="Material-10.gif" width="92" height="68" /></p>
+<p>・パイプ（外径，ｒ<sub>１</sub>，内径，ｒ<sub>２</sub>）（計算は<a href="Material-02-circle.html">ここ</a>)</p>
+<p><img src="Material-11.gif" width="160" height="78" /></p>
+<p>となります．</p>
+<p>&nbsp;</p>
+<p><span class="style10"><a href="Material-01.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="kenkyu.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Material-03.html"><img src="R-arrow.png" alt="r" width="57" height="34" border="0" /></a></p>
+</body>
+</html>

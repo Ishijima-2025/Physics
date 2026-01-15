@@ -1,0 +1,68 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>moment of inertiamoment of inertia</title>
+<link href="250219.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+	
+
+
+
+
+<title>Laplace</title>
+</head>
+
+<body>
+<p class="Red-Large-Bold">慣性モーメント</p>
+<p class="Blue-Large-Bold">球</p>
+<p class="Blue-Large">&nbsp;</p>
+<p class="Blue-Large-Bold"><img src="moment of inertia-12.png" width="774" height="344" alt=""/></p>
+<p><span class="Blue-Bold">円板（団扇）</span>と同様に考えます．ただし，<span class="Blue-Bold">円板の場合は細い棒</span>だったのですが，<span class="Red-Bold">球の場合は円板</span>となります．</p>
+<p>各スライスレイヤーでで円板の慣性モーメントを求め，回転軸方向に円板の半径を変化させながら積分していきます．</p>
+<p><img src="moment of inertia-13.png" width="223" height="369" alt=""/></p>
+<p>式で表すと，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle J_{sphere} = \int_{-R}^R dz \ \int_{0}^\sqrt{R^2 - z^2} r^2 \cdot \rho \cdot 2 \pi r \ dr \)</span></p>
+<p>となります．最初の積分は，円板の場合と同様に（積分範囲が異なりますが），</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  \int_{0}^\sqrt{R^2 - z^2}  r^2 \cdot \rho \cdot 2 \pi r \ dr = 2 \pi \rho \left[ \frac{r^4}{4} \right]_{0}^\sqrt{R^2 - z^2} = 2 \pi \rho \frac{(R^2 - z^2)^2}{4} <br>
+=  \frac{ \pi \rho}{2} (R^2 - z^2)^2 \)</span></p>
+<p>となります．次の積分に当てはめると，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle J_{sphere} = \int_{-R}^R \frac{ \pi \rho}{2} (R^2 - z^2)^2 dz  = 2 \int_{0}^R \frac{ \pi \rho}{2} (R^2 - z^2)^2 dz = \pi \rho \int_{0}^R (R^4-2R^2z^2+z^4) dz\)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  =  \pi \rho \left[ R^4z-2R^2 \frac{z^3}{3} + \frac{z^5}{5} \right] dz \)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  =  \pi \rho \left( \frac{15}{15} R^5 -\frac{10}{15} R^5 + \frac{3}{15} R^5 \right)\)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  =  \frac{8}{15} \pi \rho  R^5 \)</span></p>
+<p>球の質量は体積密度ρを使って，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle M =  \frac{4}{3} \pi \rho  R^3 \)</span></p>
+<p>となるので，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle  J_{sphere} =  \frac{8}{15} \pi \rho  R^5 = \frac{8}{15} \pi   R^5 \cdot \frac{3}{4} \frac{M}{ \pi R^3} = \boldsymbol{\frac{2}{5} MR^2} \)</span></p>
+<p>となります．</p>
+<p>&nbsp;</p>
+<p>次ページは，<span class="Blue-Large-Bold">平行軸の定理</span>，を検討していきます．</p>
+<p class="Red-Bold">&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="moment of inertia-04.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a><a href="kenkyu.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="moment of inertia-06.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

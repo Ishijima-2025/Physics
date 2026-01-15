@@ -1,0 +1,129 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>moment of inertiamoment of inertia</title>
+<link href="250219.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+	
+
+
+
+
+<title>Laplace</title>
+</head>
+
+<body>
+<p class="Red-Large-Bold">慣性モーメント</p>
+<p class="Blue-Large-Bold">円板</p>
+<p class="Blue-Large">・水平に回る場合（レコードのように）</p>
+<p class="Blue-Large-Bold"><img src="moment of inertia-08.png" width="312" height="311" alt=""/></p>
+<p><span class="Blue-Bold">半径，R，</span>で重心位置を中心に回転する場合を考えます．</p>
+<p>ここでは，厚みを考えませんので，<span class="Blue-Bold">質量M</span>，の場合，<span class="Blue-Bold">面密度ρ</span>との関係は，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle M = \pi R^2 \ \rho \)</span></p>
+<p>となります．</p>
+<p>半径ｒからr+dr，の間のリングの面積は，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle S = \pi (r+dr)^2 - \pi r^2 = \pi (r^2 + 2r \cdot dr + dr^2 - r^2) = \pi (2r \cdot dr + dr^2) \simeq 2 \pi r \cdot dr \)</span></p>
+<p>となりますので，半径０からRまでのリング部分を積分すればいいことになります．慣性モーメントは，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle J_{disk-01} = \int_{0}^R  r^2 \cdot \rho \cdot 2 \pi r \ dr = 2 \pi \rho \left[ \frac{r^4}{4} \right]_{0}^R = 2 \pi \rho \frac{1}{4} R^4 <br>
+=  \frac{M}{\pi R^2} \cdot 2 \pi  \frac{1}{4} R^4 = \boldsymbol{\frac{1}{2} MR^2  }\)</span></p>
+<p>となります．</p>
+<p>&nbsp;</p>
+<p><span class="Blue-Large">・縦の場合（団扇を回す？ように）</span></p>
+<p><img src="moment of inertia-09.png" width="312" height="359" alt=""/></p>
+<p>団扇を回す？ように回した場合を考えていきます．</p>
+<p>この場合には，中心からの距離は使いにくいので，図のように，線の慣性モーメントを求め，積分します．</p>
+<p><img src="moment of inertia-10.png" width="214" height="353" alt=""/></p>
+<p>円の中心からｚだけ離れた線分の慣性モーメントを考えます．</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle J_{line} = \int_{- \sqrt{R^2 - z^2} }^{\sqrt{R^2 - z^2} } x^2 \cdot \rho  \ dx =  \rho \left[ \frac{x^3}{3} \right]_{- \sqrt{R^2 - z^2} }^{\sqrt{R^2 - z^2} } = \frac{2 \rho}{3}  
+(R^2 - z^2)^{3/2} \)</span></p>
+<p>れは円板の中の一部の線の慣性モーメントなので，z方向にーRからRまで積分すればいいので，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle J_{line} = \int_{- R }^{R }  \frac{2 \rho}{3}  
+(R^2 - z^2)^{3/2} dz = 2 \int_{0 }^{R }  \frac{2 \rho}{3}  
+(R^2 - z^2)^{3/2} dz\)</span></p>
+<p>を計算すればいいことになります．変数変換して，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle z = R \ sin \theta \)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle dz = R \ cos \theta \ d \theta \)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle 0 \sim z \sim R \)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle 0 \sim \theta \sim \frac{ \pi}{2} \)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle J_{disk-02} = 2 \int_{0 }^{R }  \frac{2 \rho}{3}  
+(R^2 - z^2)^{3/2} dz<br>
+= \frac{4 \rho}{3} \int_{0 }^{\frac{ \pi}{2} }    
+(R^2 - R^2 \ sin^2 \theta )^{3/2} R \ cos \theta d \theta \)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle 
+= \frac{4 \rho}{3} \int_{0 }^{\frac{ \pi}{2} }    
+(R^2 \ cos^2 \theta )^{3/2} R \ cos \theta d \theta \)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle 
+= \frac{4 \rho \ R^4}{3} \int_{0 }^{\frac{ \pi}{2} }    
+cos^4 \theta \ d \theta \)</span></p>
+<p>この積分は，<a href="https://www.fbs.osaka-u.ac.jp/labs/ishijima/Euler-13.html">ここ</a>，にあるような公式を使って，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle 
+ \int_{0 }^{\frac{ \pi}{2} }    
+cos^4 \theta \ d \theta = <br />
+\int_{0 }^{\frac{ \pi}{2} }    
+\frac{ 3 + 4 \ cos \ 2 \theta + cos \ 4 \theta}{8} d \theta \)</span></p>
+<p>第二項，第三項は，θがπ，2πとなり，cos関数は０となります．したがって，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle 
+ \int_{0 }^{\frac{ \pi}{2} }    
+cos^4 \theta \ d \theta = <br />
+\int_{0 }^{\frac{ \pi}{2} }    
+\frac{ 3 }{8} d \theta <br />
+= \frac{ 3 }{8}      \displaystyle 
+\left[ \theta \right]_0^{\frac{ \pi}{2}} <br />
+=
+\frac{ 3 \pi}{16}\)</span></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle J_{disk-02} = \frac{4 \rho \ R^4}{3} \int_{0 }^{\frac{ \pi}{2} }    
+cos^4 \theta \ d \theta <br />
+= 
+\frac{4 \rho \ R^4}{3} \frac{ 3 \pi}{16} =\frac{ \pi \rho \ R^4}{4}  \)</span></p>
+<p>ここでは，厚みを考えませんので，<span class="Blue-Bold">質量M</span>，の場合，<span class="Blue-Bold">面密度ρ</span>との関係は，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle M = \pi R^2 \ \rho \)</span></p>
+<p>となります．したがって，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle J_{disk-02} = \frac{ \pi  \ R^4}{4}  \frac{M}{\pi R^2} = \boldsymbol{\frac{1}{4} MR^2  }\)</span></p>
+<p>となります．このように水平に回すより慣性モーメントが半分になっています．ついつい空気抵抗が大きそうと考えちゃいますが，ここでは慣性モーメントを考えていますので，空気抵抗は関係ありませんね．</p>
+<p>&nbsp;</p>
+<p><span class="Blue-Large-Bold">円柱</span></p>
+<p>円柱も円板と同様の考え方ですが，積分の取り方，質量と密度との関係が変わってきます（３次元になったので）</p>
+<p><img src="moment of inertia-11.png" width="706" height="330" alt=""/></p>
+<p>円周方面の積分の後，高さ方向の積分を行います．</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle J_{cylinder} = \int_0^h dx  \int_{0 }^{R }  2 \pi r \ dr \)</span></p>
+<p>ここでは，<span class="Red">厚みを考える</span>ので，<span class="Blue-Bold">質量M</span>，の場合，<span class="Blue-Bold">体積密度ρ</span>との関係は，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle M = \pi R^2 \ h \ \rho \)</span></p>
+<p>となります．</p>
+<p>最初の積分は，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle J_{disk-01} =   \int_{0 }^{R }  2 \pi r \ dr = 2 \pi \rho \left[ \frac{r^4}{4} \right]_0^R =2 \pi \rho  \frac{R^4}{4}\)</span></p>
+<p>これを高さ方向に積分するので，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle J_{cylinder} = \int_0^h 2 \pi \rho  \frac{R^4}{4} dx  = 2 \pi \rho  \frac{R^4}{4} \left[ x \right]_0^h = 2 \pi \rho  \frac{R^4}{4} h \)</span></p>
+<p>密度を代入すると，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle J_{cylinder} =  2 \pi \frac{R^4}{4} \frac{M}{ \pi R^2 h} = \boldsymbol{\frac{1}{2} M R^2} \)</span></p>
+<p>となり，<span class="Red-Bold">円板の場合と同じ計算式</span>となります．<span class="Blue-Bold">Mの定義が異なることに注意</span>です．</p>
+<p>&nbsp;</p>
+<p>次ページは，<span class="Blue-Bold">球の慣性モーメント</span>，を検討していきます．</p>
+<p class="Red-Bold">&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="moment of inertia-03.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a><a href="kenkyu.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="moment of inertia-05.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

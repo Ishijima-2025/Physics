@@ -1,0 +1,70 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>moment of inertiamoment of inertia</title>
+<link href="250219.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+	
+
+
+
+
+<title>Laplace</title>
+</head>
+
+<body>
+<p class="Red-Large-Bold">慣性モーメント</p>
+<p class="Blue-Large-Bold">棒</p>
+<p class="Blue-Large">・棒の中心が回転軸の場合</p>
+<p class="Blue-Large-Bold"><img src="moment of inertia-02.png" width="300" height="327" alt=""/></p>
+<p>長さ，<span class="Blue-Large-Bold">2a，</span>で重心位置を中心に回転する場合の慣性モーメントを求めていきます</p>
+<p>ここでは，断面，太さを考えませんので，<span class="Blue-Bold">質量M</span>，の場合，<span class="Blue-Bold">線密度ρ</span>との関係は，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle M = 2a \ \rho \)</span></p>
+<p>となります．</p>
+<p>回転中心を線の重心，ｘ座標でいうと０，とすると，慣性モーメントは，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle J = \int_{-a}^a x^2 \rho \ dx = \rho \left[ \frac{x^3}{3} \right]_{-a}^a = \rho \frac{2}{3} a^3 \)</span></p>
+<p>線密度と質量との関係を導入すると，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle J =  \frac{M}{2a} \frac{2}{3} a^3 = \boldsymbol{\frac{1}{3} Ma^2} \)</span></p>
+<p>となります．</p>
+<p>&nbsp;</p>
+<p><span class="Blue-Large">・棒の端が回転軸の場合</span></p>
+<p><img src="moment of inertia-03.png" width="482" height="259" alt=""/></p>
+<p>上と同じ条件，<span class="Blue-Bold">長さ，2a</span>，ですが，<span class="Blue-Bold">棒の端が回転軸</span>の場合を考えていきます．積分範囲が異なり，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle J = \int_{0}^{2a} x^2 \rho \ dx = \rho \left[ \frac{x^3}{3} \right]_{0}^{2a} = \rho \frac{8}{3} a^3 =  \frac{M}{2a} \frac{8}{3} a^3 = \boldsymbol{\frac{4}{3} Ma^2}\)</span></p>
+<p>と重心が回転軸の場合に比べて，<span class="Blue-Bold">4倍，慣性モーメントが大きく</span>なります，すなわち<span class="Blue-Bold">回しにくくなっている</span>ことになります．</p>
+<p>&nbsp;</p>
+<p>後に述べる，<span class="Red-Bold">平行軸の定理</span>，を使えば，<span class="Blue-Bold">回転軸と重心との距離は，a</span>，となりますので，</p>
+<p><img src="moment of inertia-04.png" width="427" height="227" alt=""/></p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle J = \frac{1}{3} Ma^2 + Ma^2 = \boldsymbol{\frac{4}{3} Ma^2}\)</span></p>
+<p>と一致します．</p>
+<p>&nbsp;</p>
+<p>次ページは，<span class="Blue-Bold">斜めの棒の慣性モーメント</span>，を検討していきます．</p>
+<p class="Red-Bold">&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="moment of inertia-01.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a><a href="kenkyu.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="moment of inertia-03.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

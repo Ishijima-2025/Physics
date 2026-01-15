@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>mugen-05</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-Blue"><span class="X-Large-Bold-RED">ランジュバン方程式-02</span></p>
+<p class="Large-Bold-Blue">&nbsp;</p>
+<p>ここで，</p>
+<p>\(\Large \frac{d(&lt;x^2&gt;)}{dt} \equiv f \)</p>
+<p>とおいて式を変形していきましょう．すると，</p>
+<p>\(\Large \frac{1}{2} m \frac{df}{dt} - k_B T+ \frac{1}{2} \gamma f = 0 \)</p>
+<p>となります．</p>
+<p>次にこの微分方程式を解いていきましょう．</p>
+<p>\(\Large  \frac{df}{dt} = - \frac{\gamma}{m}  f + \frac{2 k_B T}{m} \)</p>
+<p>定数項を無視すると，</p>
+<p>\(\Large  f = A exp \left(  - \frac{\gamma}{m}  t \right) \)</p>
+<p>定数Aを変数として，</p>
+<p>\(\Large  \frac{df}{dt} = A' exp \left(  - \frac{\gamma}{m}  t \right) - \frac{\gamma}{m} f =- \frac{\gamma}{m}  f + \frac{2 k_B T}{m} \)</p>
+<p>\(\Large   A' exp \left(  - \frac{\gamma}{m}  t \right)  = \frac{2 k_B T}{m} \)</p>
+<p>\(\Large  A'  = \frac{2 k_B T}{m}  exp \left( \frac{\gamma}{m}  t \right) \)</p>
+<p>積分すると，</p>
+<p>\(\Large  A  = \frac{2 k_B T}{m} \frac{m}{\gamma} exp \left( \frac{\gamma}{m}  t \right) + B\)</p>
+<p>となり，従って，</p>
+<p>\(\Large  f = \left[ \frac{2 k_B T}{\gamma} exp \left( \frac{\gamma}{m}  t \right) + B \right] exp \left( - \frac{\gamma}{m} \right) t = \frac{2 k_B T}{\gamma} + B exp \left( - \frac{\gamma}{m}  t \right) \)</p>
+<p>となります．t=0でf=0なので，</p>
+<p>\(\Large 0 = \frac{2 k_B T}{\gamma} + B \)</p>
+<p>となるので，</p>
+<p>\(\Large B = - \frac{2 k_B T}{\gamma} \)</p>
+<p>となり，</p>
+<p>\(\Large f =  \frac{2 k_B T}{\gamma} \left[ 1-exp \left( - \frac{\gamma}{m}  t \right) \right] \)</p>
+<p>となります．次のページに行きましょう．</p>
+<p><span class="style7"><a href="Langevin-01.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="kenkyu.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Langevin-03.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

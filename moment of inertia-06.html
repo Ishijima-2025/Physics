@@ -1,0 +1,63 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>moment of inertiamoment of inertia</title>
+<link href="250219.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+	
+
+
+
+
+<title>Laplace</title>
+</head>
+
+<body>
+<p class="Red-Large-Bold">慣性モーメント</p>
+<p class="Blue-Large-Bold">平行軸の定理</p>
+<p>今までは，<span class="Blue">”物体の重心を通る軸上の回転の慣性モーメント”</span>を求めていきましたが，<br>
+　<span class="Blue-Bold">回転軸と物体の重心が一致しない場合</span><br>
+はどのように考えていけばいいのでしょう？</p>
+<p>これは，平行軸の定理，と呼ばれていて，色々なサイトで説明がなされていますが，<a href="https://en.wikipedia.org/wiki/Parallel_axis_theorem" target="_blank">Wiki</a>，が一番わかりやすかったです．</p>
+<p><img src="moment of inertia-14.png" width="245" height="410" alt=""/></p>
+<p>図のように，重心から，<span class="Blue-Large-Bold">ｄ</span>，だけズレた軸が回転軸の場合を考えます．</p>
+<p>三次元物体の場合，慣性モーメントは，重心位置となる回転軸<span class="Blue-Bold">，z(=z'+d)</span>，の場合，</p>
+<p><span class="X-Large-Bold-RED">\( \Large     \displaystyle J_{center} = \int (x^2 + y^2 ) \ dM \)</span></p>
+<p>となりますが，回転軸がｄだけずれたｚ‘の場合は，ｘ方向にｄだけずれている物体の座標は，<span class="Blue-Bold">x+d</span>，となるので，</p>
+<p class="X-Large-Bold-RED">\( \Large     \displaystyle J = \int \left[ (x+d)^2 + y^2 \right] \ dM \)</p>
+<p class="X-Large-Bold-RED">\( \Large     \displaystyle  = \int \left[ x^2+ 2dx +d^2 + y^2 \right] \ dM \)</p>
+<p class="X-Large-Bold-RED">\( \Large     \displaystyle  = \int ( x^2+  y^2)  \ dM + 2d \int x \ dM +d^2 \int x \ dM \)</p>
+<p class="X-Large-Bold-RED">となりますが，第二項は重心の定義により，０となります．したがって，</p>
+<p class="X-Large-Bold-RED">\( \Large     \displaystyle  =J_{center} +Md^2 \)</p>
+<p class="X-Large-Bold-RED">となり，<span class="Red-Bold">重心を通る場合の慣性モーメント　＋　回転軸と重心との距離の二乗の積</span>，と簡単な計算となります．</p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p>次ページからは，<span class="Blue-Large-Bold">平行軸の定理の検証</span>，を検討していきます．</p>
+<p class="Red-Bold">&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="moment of inertia-05.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a><a href="kenkyu.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="moment of inertia-07.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

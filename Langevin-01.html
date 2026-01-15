@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>mugen-05</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-Blue"><span class="X-Large-Bold-RED">ランジュバン方程式-01</span></p>
+<p class="Large-Bold-Blue"><br />
+<span class="Blue-Bold">　ランジュバン方程式とは？</span></p>
+<p>今まで，運動方程式を理解してきました．しかし，ミクロな物体，特に水中では周囲の水分子からの衝突を受けます．<br />
+従って，一般的な外力（水分子の衝突以外）がないときにもミクロな物体は絶えず動いてしまいます．</p>
+<p>その動きは，ランダムで一般的な運動方程式では記述できません．<br />
+どうしたらよいでしょう？<br />
+そこで，登場したのが，<br />
+　<span class="Large-Bold-Red">ランジュバン方程式</span><br />
+なのです．</p>
+<p>ランジュバン方程式自体はそれほど複雑な式ではありません．</p>
+<p>\(\Large m \frac{d^2}{dt^2} +  \gamma \frac{dx}{dt} = R(t) \)</p>
+<p>となります．ここで，R(t)，とは何でしょう？<br />
+簡単に言うと，<br />
+　ランダムな力<br />
+となります．<br />
+重力や電場と言ったある方向を持った力ではない，ランダムな力です．<br />
+ですので，当然平均値は０となります．</p>
+<p>\(\Large &lt;R(t)&gt;=0 \)</p>
+<p>また，R(t)には時間的な周期性もないとしますので，自己相関がデルタ関数となります．</p>
+<p>\(\Large &lt;R(t) \cdot R(t')&gt;  \propto \delta (t-t') \)</p>
+<p>では，ランジュバン方程式を解いていきましょう．まずは，両辺にxを掛けます．</p>
+<p>\(\Large m x \frac{d^2}{dt^2} +  \gamma x\frac{dx}{dt} = x R(t) \)</p>
+<p>これを解くわけですが，ここで微分を変形しましょう．</p>
+<p>\(\Large  \frac{d(x^2)}{dt} = 2 x \frac{dx}{dt} \)</p>
+<p>\(\Large  x \frac{dx}{dt} = \frac{1}{2} \frac{d(x^2)}{dt}   \)</p>
+<p>\(\Large  \frac{d^2(x^2)}{dt^2} = \frac{d(2 x \frac{dx}{dt})}{dt} =    2 \frac{dx}{dt} \frac{dx}{dt} + 2x \frac{d^2x}{dt^2} = 2  \{ (\frac{dx}{dt})^2 + x \frac{d^2x}{dt^2} \} \)</p>
+<p></p>
+<p>\(\Large x \frac{d^2x}{dt^2} = \frac{1}{2} \frac{d^2(x^2)}{dt^2} - (\frac{dx}{dt})^2 \)</p>
+<p>を使って変形すると，</p>
+<p>\(\Large \frac{1}{2} m \frac{d^2(x^2)}{dt^2} - m \left( \frac{dx}{dt} \right) ^2 + \frac{1}{2} \gamma \frac{d(x^2)}{dt} = x R(t) \)</p>
+<p>となります．</p>
+<p>ここで集合平均を取ります．</p>
+<p>\(\Large \frac{1}{2} m \frac{d^2(&lt;x^2&gt;)}{dt^2} - m &lt;( \frac{dx}{dt})^2&gt; + \frac{1}{2} \gamma \frac{d(&lt;x^2&gt;)}{dt} = &lt;x R(t)&gt; \)</p>
+<p>ここで，右辺のカギ括弧内の二つは独立なので，それぞれの平均の積と置き換えることができます．<br />
+さらに，ランダムな力の平均は０なので，</p>
+<p>\(\Large &lt;x R(t)&gt; = &lt;x&gt; &lt;R(t)&gt; =0 \)</p>
+<p>さらに，</p>
+<p>\(\Large &lt;( \frac{dx}{dt})^2&gt; = &lt;v^2&gt; \)</p>
+<p>なので，</p>
+<p>\(\Large \frac{1}{2} m \frac{d^2(&lt;x^2&gt;)}{dt^2} - k_B T+ \frac{1}{2} \gamma \frac{d(&lt;x^2&gt;)}{dt} = 0 \)</p>
+<p>となります．</p>
+<p>次にこの微分方程式を解いていきましょう．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="kenkyu.html"><img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Langevin-02.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+</body>
+</html>
