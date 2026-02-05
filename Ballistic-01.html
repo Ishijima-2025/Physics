@@ -1,0 +1,136 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PSF-07</title>
+<link href="250219.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="Red-Large-Bold"><strong>弾道計算  について-01 </strong></p>
+<p>&nbsp;</p>
+<p>研究とは直接関係ない話ですが，iphone，ipadなどでは物理計算が得意で簡単に弾道のような計算を処理してくれます．</p>
+<p>高校でも，ある角度，ある初期速度で打ち上げられた物体の軌道，を計算することを学びましたが，その基本は，</p>
+<p>　地面は水平<br>
+　重力加速度は一定</p>
+<p>の条件のもとでの計算でした．</p>
+<p>しかし，ロケット，衛星の運動など記述する場合は，重力元である地球との距離，相対角度が刻一刻変化していくのでそのままでは適応できません．</p>
+<p>ネットで色々調べてみたのですが，楕円軌道，になる，ぐらいの記述しかありませんでした．</p>
+<p>そこで，実際に計算しようと思い立ちました．</p>
+<p>解析的に厳密解を導き出すことは私の能力では難しそうなので，差分法（厳密に言うと違うかもしれませんが）で計算してみようと思い立ちました．</p>
+<p>以下のようなモデルを考えます．<br>
+　<span class="Blue">⊿ｔごとに，変位を計算していく</span><br>
+方法です．</p>
+<p><img src="ballistic-01.png" width="800" height="1111" alt=""/></p>
+<p>ここで，前提として，<br>
+　<span class="Large-Bold-RED">地表からｈの距離</span>から<span class="Large-Bold-RED">ｖの速度</span>で<span class="Large-Bold-RED">角度θ<sub>0</sub></span>で発射<br>
+することにします．</p>
+<p>角度の定義は，<span class="Large-Bold-RED">垂直を0度</span>，としています（水平は90度ですね）</p>
+<p>重力加速度は，</p>
+<p>\( \Large     F = mg = G \frac{M \ m}{R^2} \)</p>
+<p>ですので，</p>
+<p>\( \Large     g = G \frac{M }{R^2} \)</p>
+<p>となります．ここで，<br />
+　G　：　万有引力定数 (6.67×10<sup>-11</sup> m<sup>3</sup>kg<sup>-1</sup>s<sup>-2</sup>）<br />
+　R　：　地球の半径（6.37×10<sup>6</sup>m）<br />
+　M　：　地球の質量（5.96×10<sup>24</sup>kg）<br />
+です．</p>
+<p>&nbsp;</p>
+<p class="Large-Blue">・ステップ-01</p>
+<p><span class="Large-Bold-RED">ｖの速度</span>で<span class="Large-Bold-RED">角度θ<sub>0</sub></span>で発射するので，</p>
+<p>　地表に水平な成分　：　v<sub>||</sub><br />
+　地表に垂直な成分　：　v<sub>⊥</sub>  </p>
+<p>に分けて考えていきます．</p>
+<p>\( \Large     v_{\parallel 0} = v \ sin \theta_0 \)</p>
+<p>ですが，垂直成分は重力加速度がかかるので，</p>
+<p>\( \Large     v_{\perp 0} = v \ cos \theta_0 - g_0 \ \Delta t \)</p>
+<p>\( \Large     g_0 = G \frac{M }{(R+h)^2} \)</p>
+<p>となります．</p>
+<p>その時の変位量は，<br />
+\( \Large     x_{\parallel 0} = v_{\parallel 0}  \ \Delta t \)</p>
+<p>\( \Large     x_{\perp 0} = v_{\perp 0} \ \Delta t \)</p>
+<p>となります．</p>
+<p>最初のステップ，⊿ｔにおける速度，v<sub>0</sub>は，</p>
+<p>\( \Large     v_0 = \sqrt{ v_{\parallel 0}^2 + v_{\perp 0}^2} \)</p>
+<p>角度，θ<sub>01</sub>は，</p>
+<p>\( \Large     \theta_{01} = tan^{-1} \frac{v_{\parallel 0}}{v_{\perp 0}} \)</p>
+<p>となります．この際の地球中心からの角度，φ<sub>1</sub>，は</p>
+<p>\( \Large     \varphi_1 = tan^{-1} \frac{x_{\parallel 0}}{R+h+x_{\perp 0}} \)</p>
+<p>となります．</p>
+<p>新しい高度，h<sub>1</sub>は，</p>
+<p>\( \Large     h_1 = \sqrt{x_{\parallel 0}^2 + (R+h+x_{\perp 0})^2} -R \)</p>
+<p>新しい座標は，</p>
+<p>\( \Large     x_1 = (R+h_1) sin \varphi_1 \)</p>
+<p>\( \Large     y_1 = (R+h_1) cos \varphi_1 \)</p>
+<p>となります</p>
+<p>&nbsp;</p>
+<p class="Large-Blue">・ステップ-02</p>
+<p>次のステップは，地球の中心を通るベクトルとそれに対する垂直ベクトルで同様の計算を行います．</p>
+<p>新しい角度，θ<sub>1</sub>は，v<sub>0</sub>がそのまま進み（赤点線），新しい地球の中心を通るベクトルとの角度なので，</p>
+<p>\( \Large     \theta_1 = \theta_{01}- \varphi_0 \)</p>
+<p>となります．</p>
+<p>あとは，ステップ-01，と同様な計算をおこない，</p>
+<p>\( \Large     v_{\parallel 1} = v_0 \ sin \theta_1 \)</p>
+<p>ですが，垂直成分は重力加速度がかかるので，</p>
+<p>\( \Large     v_{\perp 1} = v_0 \ cos \theta_1 - g_1 \ \Delta t \)</p>
+<p>\( \Large     g_1 = G \frac{M }{(R+h_1)^2} \)</p>
+<p>となります．</p>
+<p>その時の変位量は，<br />
+  \( \Large     x_{\parallel 1} = v_{\parallel 1}  \ \Delta t \)</p>
+<p>\( \Large     x_{\perp 1} = v_{\perp 1} \ \Delta t \)</p>
+<p>となります．</p>
+<p>最初のステップ，⊿ｔにおける速度，v<sub>1</sub>は，</p>
+<p>\( \Large     v_1 = \sqrt{ v_{\parallel 1}^2 + v_{\perp 1}^2} \)</p>
+<p>角度，θ<sub>02</sub>は，</p>
+<p>\( \Large     \theta_{02} = tan^{-1} \frac{v_{\parallel 1}}{v_{\perp 1}} \)</p>
+<p>となります．この際の地球中心からの角度，φ<sub>2</sub>，は</p>
+<p>\( \Large     \varphi_2 = tan^{-1} \frac{x_{\parallel 1}}{R+h+x_{\perp 1}} \)</p>
+<p>となります．</p>
+<p>新しい高度，h<sub>2</sub>は，</p>
+<p>\( \Large     h_2 = \sqrt{x_{\parallel 1}^2 + (R+h+x_{\perp 1})^2} -R \)</p>
+<p>新しい座標は，</p>
+<p>\( \Large     x_2 = (R+h_2) \ sin (\varphi_1 + \varphi_2) \)</p>
+<p>\( \Large     y_2 = (R+h_2) \ cos (\varphi_1 + \varphi_2) \)</p>
+<p>となります．ポイントは座標を求める際には，φの積算を使う点です．</p>
+<p>&nbsp;</p>
+<p class="Large-Blue">・注意点</p>
+<p>計算はこれを繰り返し続けて座標を計算していくだけなのですが，注意点としては，<br />
+　<span class="Blue">アークタンジェントの計算</span><br />
+です．</p>
+<p>θが90度を超えてしまうと，アークタンジェントの計算がややこしくなります．</p>
+<p>\( \Large      tan^{-1} \frac{v_{\parallel }}{v_{\perp }} &gt; 0 \)</p>
+<p>の場合は，問題ないのですが，</p>
+<p>\( \Large      tan^{-1} \frac{v_{\parallel }}{v_{\perp }} &lt; 0 \)</p>
+<p>の場合には，</p>
+<p>\( \Large      \theta_{0?} =tan^{-1} \frac{v_{\parallel }}{v_{\perp }} + \pi \)</p>
+<p>と置き換える必要があります．</p>
+<p>&nbsp;</p>
+<p>．<br />
+次のページに計算結果を示します．</p>
+<p><span class="style7"><a href="index.html"> <img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Ballistic-02.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

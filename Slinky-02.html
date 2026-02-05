@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Slinky-02</title>
+<link href="250219250219.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-RED"><strong>バネの自由落下における最下端の位置変化について，計算</strong>-1</p>
+<p>さて，実際に実験をしてみると，確かにバネ最下端は静止していることがわかります？<br />
+なぜか？と考えることが重要です．<br />
+定性的には，<br />
+<span class="Large-Bold-Blue">　重力によるバネの落下（下向きの変位）<br />
+　バネののびが戻る際の上向きの変位</span><br />
+このバランスがちょうどとれて，静止していることが思い浮かびます．</p>
+<p>では，計算はどうするのでしょう？<br />
+これは．．．私の力では全くできません．<br />
+しかし，<a href="http://cat2.edu.kagoshima-u.ac.jp/Text/public/physics/wave/Wave/" target="_blank">きちんと計算して解いてくれている方</a>がおりました．<br />
+ですので，以下の計算は，全く私のオリジナルではなく，上記のサイトをなぞったものです．<br />
+計算していただいた方，ありがとうございました．</p>
+<p class="Large-Bold-Blue">・　バネの波動方程式</p>
+<p> バネに伝わる縦波の変位，u(x,t)，を考えましょう．<br />
+これは，自然長の時に位置，ｘ，にあった部分がｘ方向に，u(x,t)，だけ移動していることを示します． <br />
+ここで，ばね定数，ｋ，線密度，σ，を使います．<br />
+自然長，L，のバネに張力，F，を加えた時ののびを，ΔL，とすると， </p>
+<p><img src="Slinky-01.gif" width="250" height="77" /></p>
+<p>と定義されます．<br />
+ひずみ，<img src="Slinky-02.gif" width="45" height="77" /> ，対する力は，<img src="Slinky-03.gif" width="107" height="77" /> であり，xとx+dxとの間に働く力は，（その微分となり）， <img src="Slinky-04.gif" width="165" height="87" />となります．</p>
+<p>また，力は，</p>
+<p><img src="Slinky-05.gif" width="137" height="87" /></p>
+<p>となりますので，</p>
+<p><img src="Slinky-06.gif" width="317" height="280" /></p>
+<p>を得ることができます．</p>
+<p>なんか．．．<span class="Large-Red">拡散方程式</span>に似ていますね．</p>
+<p><span class="style7"><a href="Slinky-01.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"> <img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Slinky-03.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+</body>
+</html>

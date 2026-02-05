@@ -1,0 +1,62 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PSF-07</title>
+<link href="250219.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-RED"><strong>弾道計算  について-02 </strong></p>
+<p>&nbsp;</p>
+<p>では，実際に計算してみましょう．</p>
+<p>プログラムは，Labview2009，です．だいぶ古いバージョンですが未だに現役です．</p>
+<p>条件は，まずは，国際宇宙ステーション（ISS)の条件から，<a href="https://ja.wikipedia.org/wiki/%E5%9B%BD%E9%9A%9B%E5%AE%87%E5%AE%99%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" target="_blank">ここ</a>，の情報によると，</p>
+<p>　高度：400km<br />
+　速度：7.7km/s</p>
+<p>ということで</p>
+<p>　⊿ｔ：1s<br />
+　角度：90度</p>
+<p>で計算してみた結果が下の図です．</p>
+<p>このように，ほぼ円軌道を描いているのが分かります．</p>
+<p><img src="ballistic-02.png" width="723" height="638" alt=""/></p>
+<p>&nbsp;</p>
+<p>ちなみに，速度を<span class="Blue">7.5km/s</span>に落とすと，1/4周あたりで落下してしまいます．</p>
+<p><img src="ballistic-03.png" width="746" height="628" alt=""/></p>
+<p>&nbsp;</p>
+<p>地面から<span class="Blue">45度</span>で，速度を<span class="Blue">7.5km/s</span>，で打ち上げると，結局は1/4周あたりで落下します．</p>
+<p><img src="ballistic-04.png" width="733" height="643" alt=""/></p>
+<p>&nbsp;</p>
+<p>地面から<span class="Blue">45度</span>で，速度を<span class="Blue">11km/s</span>，で打ち上げると，地球に戻ってこずに，どんどん遠くなります．</p>
+<p>これが，<span class="Large-Red">脱出速度</span>，でしょうか．</p>
+<p><img src="ballistic-05.png" width="752" height="638" alt=""/></p>
+<p>&nbsp;</p>
+<p>次ページに，ちょっと気になる点を．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Ballistic-01.html"><img src="L-arrow.png" alt="l" width="57" height="34" /></a> <a href="index.html"> <img src="TOP.png" alt="t" width="57" height="34" /></a> <a href="Ballistic-03.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

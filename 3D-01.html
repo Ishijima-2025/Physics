@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>3D-01</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">斜め上から波形を描画する方法-01</p>
+<p class="Large-Bold-Red">なぜ３D？</p>
+<p>３Dソフトやゲームなど現在当たり前のように使われていますが，生命科学の分野ではそれほど一般化されていないようです．<br />
+たとえば，立方体などの単純な図形の場合はまあまあ簡単に２Dのアプリで描画できますが，<br />
+　<span class="X-Large-Bold-RED">正弦波</span><br />
+などは，真横からの描画は比較的簡単ですが，<span class="Large-Bold-Red">斜め上</span>，からの描画は結構大変です．<br />
+たとえば，<br />
+　<a href="https://ja.wikipedia.org/wiki/偏光#/media/File:Wire-grid-polarizer.svg" target="_blank">Wiki</a>，<a href="http://www.cybernet.co.jp/optical/course/optics/opt06/opt03.html" target="_blank">光学総合サイト</a>，<a href="http://fnorio.com/0124polarization_of_light0/polarization_of_light0.html" target="_blank">ＦＮの高校物理</a><br />
+など．</p>
+<p>このような正弦波などのカーブを斜め上から見たときのトレースを描画するにはどのようにしたらよいでしょう？<br />
+それは，<br />
+　<span class="Large-Bold-Red">３Dの物体を２Dに投影して描画する</span><br />
+ということなのですが，きちんと計算で考えてみましょう．</p>
+<p>なお，今回は<span class="Blue-Bold">遠近法の考慮は行っておりません</span>．<br />
+と言うのも，科学で使う概念図にはあまり遠近法的概念は必要ないと個人的に思っているからです．<br />
+遠近法を用いるとより現実に近い描画可能ですが，奥の方の物体が小さくなりすぎて詳細がわかりづらくなってしまう恐れがあると思っています．</p>
+<p class="Large-Bold-Red">概念図</p>
+<p><img src="3D-01.png" width="830" height="462" /></p>
+<p>&nbsp;</p>
+<p>まず，上図のようなXYZ空間を考えます．<br />
+X軸からφ傾いたXZ軸に垂直な平面（青色）を考えます．<br />
+そこから，θだけ傾いた平面（紫色）を考えます．<br />
+観察者はこの紫色の平面に垂直の位置からこのXYZ空間を観察することとします．</p>
+<p>&nbsp;</p>
+<p class="Large-Bold-Red"><span class="style7"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="3D-02.html"><img src="R-arrow.png" alt="r" width="57" height="34" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
