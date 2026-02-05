@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sunshine-01</title>
+<link href="250219250219.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<p class="X-Large-RED">日照時間と地軸の傾きとの関係</p>
+<p>全く，研究とは関係ないのですが，<br />
+　<span class="Large-Bold-RED">日照時間と地軸の傾きとの関係ってどうなっているのだろう？</span><br />
+とふと思い，計算してみました．<br />
+これで，説明できるかどうかは．．．．．わかりませんが．．</p>
+<p>まずは，地球の地軸と太陽の軌跡を考えてみます．<br />
+地軸は太陽に対して直交していないので，</p>
+<p><img src="sunshine-01.jpg" width="409" height="341" /></p>
+<p>こんな感じとなります．<br />
+この赤いラインがちょうど円の半分の時，日照時間が12時間となるのですね．</p>
+<p>さて，緑色の面を考えましょう．</p>
+<p><img src="sunshine-02.jpg" width="337" height="337" /></p>
+<p>なので，<br />
+　A = r×sin ψ<br />
+となります．  </p>
+<p>次に青色の面を考えましょう．</p>
+<p><img src="sunshine-03.jpg" width="337" height="337" /></p>
+<p> B =A×tan φ = r×sin ψ×tan φ</p>
+<p>となります．</p>
+<p>&nbsp;</p>
+<p>次に，オレンジの面を考えましょう．</p>
+<p><img src="sunshine-04.jpg" width="337" height="337" /></p>
+<p>オレンジの面の半径が，上の緑の面から計算した値となるので，<br />
+　cos　θ = B/(r×cosψ） = r×sin ψ×tan φ/(r×cosψ） = tan ψ×tan φ<br />
+となります．</p>
+<p>ここで，一番上の図の赤い太陽の軌跡は，一周で24時間なので，<br />
+　日照時間 = 2θ/(2π)×24<br />
+となりますので，<br />
+　<span class="Large-Bold-RED">日照時間 = 24/π×cos<sup>-1</sup> (tan ψ×tan φ)</span><br />
+となります．</p>
+<p>さて，実際の値を入れてみましょう．<br /> 
+　地軸の傾き = 23.43°<br />
+のようです．</p>
+<p>各地の緯度と冬至の日照時間は，<br />
+</p>
+<table width="200" border="1">
+  <tr>
+    <td>場所</td>
+    <td>日照時間（冬至）</td>
+  </tr>
+  <tr>
+    <td><p>仙台</p></td>
+    <td> 9:30</td>
+  </tr>
+  <tr>
+    <td>那覇</td>
+    <td>10:30</td>
+  </tr>
+  <tr>
+    <td>宮古島</td>
+    <td>10:38</td>
+  </tr>
+  <tr>
+    <td>明石</td>
+    <td>9:56</td>
+  </tr>
+  <tr>
+    <td>根室</td>
+    <td>9:01</td>
+  </tr>
+</table>
+<p>とのことでした（<a href="http://eco.mtk.nao.ac.jp/koyomi/dni/" target="_blank">ここ</a>，を参考にしました）．</p>
+<p>計算結果との比較は，</p>
+<p><img src="sunshine-05.jpg" alt="" width="481" height="289" /></p>
+<p>となり，ほぼ．．．合っているようです．<br />
+若干，計算結果の方が短くなりますね．．．．<br />
+上の五都市の平均で言うと，11分ちょっと．．．</p>
+<p>ん？もしかしたら．．．<a href="http://www.nao.ac.jp/faq/a0102.html" target="_blank">定義</a>によると，<br />
+　<span class="X-Large-Blue">日の出・日の入り　：　「太陽の上辺が地平線（または水平線）に一致する時刻」を、日の出・日の入りの時刻</span><br />
+とありますね．．<br />
+つまり，<br />
+<span class="X-Large-Blue">　計算では，太陽を点として考えていた．<br />
+　しかし，定義では，太陽の上辺の位置だった<br />
+　つまり，ちょうど太陽の直径分計算結果にプラスしなければならない</span><br />
+と言うことです．</p>
+<p>では，太陽自体が水平線を横切るのにどのくらいの時間がかかるのでしょう？</p>
+<p><a href="sunshine-02.html">次へ</a> </p>
+<p>&nbsp;</p>
+</body>
+</html>
