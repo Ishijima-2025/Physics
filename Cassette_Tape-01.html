@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>cassette</title>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<link href="file:///D|/Dropbox/Homepage/Microscope/160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+.style10 {color: #000000; }
+.style1 {color: #0000FF}
+.style2 {	font-size: large;
+	color: #0000FF;
+}
+.style3 {	font-size: x-large;
+	color: #FF0000;
+}
+.style5 {font-size: x-large; color: #FF0000; font-weight: bold; }
+</style>
+</head>
+
+<body>
+<h1 class="style1">カセットテープの回転速度</h1>
+
+<p>&nbsp;</p>
+<p>カセットテープ，私の時代において，音楽を聴くうえで欠かせない存在でした．</p>
+<p>レコードからダビングしたり，車用に編集したり，ナカミチに憧れたり．．．．</p>
+<p>&nbsp;</p>
+<p>学生時代のころ，ラボの先輩方と，”カセットテープの回転速度ってどう変化する？”，という話題になりました．</p>
+<p>先輩は，微分方程式を使って解こうというところまでは記憶にあるのですが，その後どうなったかの記憶はありません．</p>
+<p>&nbsp;</p>
+<p>ふと先日，どうなっているのだろう？ともう一度計算を試みることにしました．</p>
+<p>ポイントは，</p>
+<p class="Large-Bold-Red">　テープの進行速度は一定である</p>
+<p class="Large-Bold-Red">　テープには厚みがあるので，再生時には，<br />
+  　　左側は，徐々に半径が小さくなる<br />
+　　右側は，徐々に半径が大きくなる</p>
+<p>というものです．</p>
+<p>つまり，</p>
+<p class="Red-Bold">カセットテープは，ヘッド部分でのテープの速度が一定になるように作られている（はず）． なので，送り側，受け側のリールの半径が徐々に変化するので，それに伴い，回転速度も時間とともに変化する</p>
+<p>ことになります．</p>
+<p><img src="Casette-01.png" width="855" height="360" alt=""/></p>
+<p>カセットテープの模式図を描いてみました．</p>
+<p>実際には，左右の軸は水平なのですが，簡単にするためにテープの進行を水平にしてみました</p>
+<p>ここで，</p>
+<p>　r<sub>L</sub>　：　左側のテープの半径<br />
+　r<sub>R</sub>　：　右側のテープの半径<br />
+　r<sub>H</sub>　：　リールハブ（中央の白いもの）の半径<br />
+　V　：　テープの進行速度（一定）<br />
+　ｄ　：　テープの幅</p>
+<p>となります．</p>
+<p>まずは簡単に，リールハブ (r<sub>H</sub>）がない状態を考えます．<br />
+    r<sub>L0</sub>　：　左側のリールの半径<br />
+</p>
+<p>一定速度でテープが進むということは，ｔ時間の間に</p>
+<p>  　<span class="Large-Bold-Red">vdt</span></p>
+<p>  だけ面積が変化することになります．<br />
+</p>
+<p>したがって，<br />
+  <span class="Blue-Bold">　送り側の面積は一定速度で減少<br />
+  　受け側の面積は一定速度で上昇</span><br />
+  することになります．<br />
+</p>
+<p>$$<br />
+  \begin{equation}<br />
+  \begin{split}<br />
+  \pi \ r_L^2(t) &amp;= \pi \ r_{L0}^2 - v d t \\<br />
+  \pi \ r_R^2(t) &amp;=  \hspace{ 35 pt} v d t \\<br />
+  \end{split}<br />
+  \end{equation}<br />
+$$</p>
+<p>$$<br />
+  \begin{equation}<br />
+  \begin{split}<br />
+  r_L(t) &amp;= \sqrt{\ r_{L0}^2 - \frac{v d t}{ \pi}} \\<br />
+  r_R(t) &amp;= \sqrt{ \frac{v d t}{ \pi}} \\<br />
+  \end{split}<br />
+  \end{equation}<br />
+$$</p>
+<p>半径ｒで速度ｖで回転する場合，一周する時間Tは，</p>
+<p>$$<br />
+  \begin{equation}<br />
+  \begin{split}<br />
+  2 \pi r &amp;= vT \\<br />
+  f &amp;= \frac{1}{T} = \frac{v}{2 \pi r }<br />
+  \end{split}<br />
+  \end{equation}<br />
+  $$</p>
+<p>したがって，LRそれぞれの回転速度(Hz)は，<br />
+  $$<br />
+  \begin{equation}<br />
+  \begin{split}<br />
+  f_L(t) &amp;= \frac{v}{2 \pi \ \sqrt{\ r_{L0}^2 - \frac{v d t}{ \pi}}} \\<br />
+  f_R(t) &amp;= \frac{v}{2 \pi \ \sqrt{ \frac{v d t}{ \pi}}} \\<br />
+  \end{split}<br />
+  \end{equation}<br />
+  $$</p>
+<p>リールハブがある場合も，R側のみ影響し，r<sub>H</sub>とすると，</p>
+<p>$$<br />
+  \begin{equation}<br />
+  \begin{split}<br />
+  r_L(t) &amp;= \sqrt{\ r_{L0}^2 - \frac{v d t}{ \pi}} \\<br />
+  r_R(t) &amp;= \sqrt{r_H^2 +  \frac{v d t}{ \pi}} \\<br />
+  \end{split}<br />
+  \end{equation}<br />
+  $$</p>
+<p>$$<br />
+  \begin{equation}<br />
+  \begin{split}<br />
+  f_L(t) &amp;= \frac{v}{2 \pi \ \sqrt{ r_{L0}^2 - \frac{v d t}{ \pi}}} \\<br />
+  f_R(t) &amp;= \frac{v}{2 \pi \ \sqrt{ r_H^2 + \frac{v d t}{ \pi}}} \\<br />
+  \end{split}<br />
+  \end{equation}<br />
+  $$</p>
+<p>毎分(r.p.m.)にすると，<br />
+  $$<br />
+  \begin{equation}<br />
+  \begin{split}<br />
+  f_L(t) &amp;= \frac{60 \ v}{2 \pi \ \sqrt{ r_{L0}^2 - \frac{v d t}{ \pi}}} \\<br />
+  f_R(t) &amp;= \frac{60 \ v}{2 \pi \ \sqrt{ r_H^2 + \frac{v d t}{ \pi}}} \\<br />
+  \end{split}<br />
+  \end{equation}<br />
+  $$</p>
+<p>実際の回転速度は，Copilotによると，30分テープの場合，<br />
+  r<sub>L0</sub>　：　左側のリールの初期半径　：　24 mm<br />
+   v  ：　テープの速度　：　47.6 mm/s<br />
+   d  　：　テープの厚み　：　 15 μm<br />
+  r<sub>H</sub>：　リールハブの半径　：　10 mm<br />
+とのことでした．</p>
+<p>最初のLRそれぞれの半径は当然ながら，</p>
+<p>$$<br />
+  \begin{equation}<br />
+  \begin{split}<br />
+  r_L(0) &amp;= \sqrt{\ r_{L0}^2 - \frac{v d \cdot 0}{ \pi}} = 24 \ mm\\<br />
+  r_R(t) &amp;= \sqrt{ r_H^2 + \frac{v d \cdot 0}{ \pi}} = 10 \ mm\\<br />
+  \end{split}<br />
+  \end{equation}<br />
+  $$</p>
+<p>$$<br />
+  \begin{equation}<br />
+  \begin{split}<br />
+  f_L(0) &amp;= \frac{60 \ v}{2 \pi \ \sqrt{ r_{L0}^2 - \frac{v d  \cdot 0}{ \pi}}} \\<br />
+  &amp;= \frac{60 \times 47.6 \ mm/s}{2 \pi \times 24 \ mm}\\<br />
+  &amp;= 18.94 \ r.p.m. \\<br />
+  f_R(0) &amp;= \frac{60 \ v}{2 \pi \ \sqrt{ r_H^2 + \frac{v d  \cdot 0t}{ \pi}}} \\<br />
+  &amp;= \frac{60 \times 47.6 \ mm/s}{2 \pi \times 10 \ mm}\\<br />
+  &amp;= 45.46 \ r.p.m. \\<br />
+  \end{split}<br />
+  \end{equation}<br />
+  $$</p>
+<p>30分後には，</p>
+<p>$$<br />
+  \begin{equation}<br />
+  \begin{split}<br />
+  r_L(0) &amp;= \sqrt{\ r_{L0}^2 - \frac{v d \cdot 30 \times 60}{ \pi}} = 12.92 \ mm\\<br />
+  r_R(t) &amp;= \sqrt{ r_H^2 + \frac{v d \cdot 30 \times 60}{ \pi}} = 22.56 \ mm\\<br />
+  \end{split}<br />
+  \end{equation}<br />
+  $$</p>
+<p>$$<br />
+  \begin{equation}<br />
+  \begin{split}<br />
+  f_L(0) &amp;= \frac{60 \ v}{2 \pi \ \sqrt{ r_{L0}^2 - \frac{v d  \cdot 30 \times 60}{ \pi}}} \\<br />
+  &amp;= 35.18 \ r.p.m. \\<br />
+  f_R(0) &amp;= \frac{60 \ v}{2 \pi \ \sqrt{ r_H^2 + \frac{v d  \cdot 30 \times 60}{ \pi}}} \\<br />
+  &amp;= 20.15 \ r.p.m. \\<br />
+  \end{split}<br />
+  \end{equation}<br />
+  $$</p>
+<p>最大時間は，</p>
+<p>$$<br />
+  \begin{equation}<br />
+  \begin{split}<br />
+  r_L(t) &amp;= r_H(t) = \sqrt{\ r_{L0}^2 - \frac{v d t}{ \pi}} \\<br />
+  \frac{v d t}{ \pi} &amp;= r_{L0}^2 - r_H^2 \\<br />
+  t &amp;= \frac{\pi (r_{L0}^2 - r_H^2)}{vd} \\<br />
+  &amp;= \frac{\pi (24^2 - 10^2) [mm^2]}{47.6 [mm/s] \times 15E-3 [mm]} \\<br />
+  &amp;= 2094.40 [s] = 34.91 [min]<br />
+  \end{split}<br />
+  \end{equation}<br />
+  $$</p>
+<p>とちょっと余裕があることになります．</p>
+<p>図示すると，</p>
+<p><img src="Casette-02.png" width="745" height="494" alt=""/></p>
+<p>ということになります．</p>
+<p>これは，カセットテープのみならず，ビデオテープ，オープンリールなどにも適用できる計算方法ですね．．．．</p>
+<p>昔々，一橋大学の上坪先生がオープンリールのビデオシステムで画像を記録していたのを覚えています．遠心顕微鏡だったっけな？</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Tool.html"><img src="TOP.png" alt="t" width="57" height="34" /></a><a href="index.html"></a></span></p>
+</body>
+</html>
