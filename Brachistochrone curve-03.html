@@ -1,0 +1,119 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>Brachistochrone curve</title>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">最速降下曲線-03 - θとΦとの関係</p>
+<p class="Large-Bold-Red">&nbsp;</p>
+<p class="X-Large-Bold-RED">・θとΦとの関係</p>
+    <p>スネルの法則（っぽい）から，Φ，サイクロイド曲線からθ，が登場しました．</p>
+<p>では，これら2つの角度？の関係はどうなっているでしょう？</p>
+<p>曲線の傾きとφとの関係は，</p>
+<p><img src="Fastest-05.png" width="666" height="384" alt=""/><br>
+  <br>
+  からわかるように，</p>
+<p>$$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  \frac{dy}{dx} &amp;= tan \ ( \pi/2 - \phi) \\<br>
+  &amp;= \frac{1}{ tan \ \phi}<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }<br>
+  $$<br>
+</p>
+<p>となります．</p>
+<p>それとは別に，サイクロイド曲線から，<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  x &amp;= a ( \theta - sin \ \theta)\\<br>
+y &amp;= a (1 - cos \ \theta) \\  <br>
+  \frac{dy}{dx} &amp;= \frac{\frac{dy}{d \theta}}{\frac{dx}{d \theta}} \\<br>
+  \frac{dx}{d \theta} &amp;= a (1 - cos \ \theta)\\<br>
+  \frac{dy}{d \theta} &amp;= -a \ sin \ \theta \\<br>
+  \frac{dy}{dx} &amp;= \frac{-a \ sin \ \theta}{a (1 - cos \ \theta)} = -\frac{  sin \ \theta}{1 - cos \ \theta} \\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }<br>
+  $$</p>
+<p><span class="Blue-Bold">ニ倍角（半角？）</span>の公式から，</p>
+<p>$$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  sin \ \theta \cdot sin \ \theta &amp;= \frac{e^{i \theta} - e^{-i \theta}}{2i} \cdot \frac{e^{i \theta} - e^{-i \theta}}{2i} \\<br>
+  &amp; \frac{e^{2i \theta} -2 +  e^{-2i \theta}}{-4} \\<br>
+  &amp;= \frac{1}{2} ( 1 - cos \ 2 \theta) \\<br>
+  1 - cos \ \theta &amp;= 2 sin^2 \frac{\theta}{2} \\<br>
+  sin \ \theta \cdot cos \ \theta &amp;= \frac{e^{i \theta} - e^{-i \theta}}{2i} \cdot \frac{e^{i \theta} + e^{-i \theta}}{2} \\<br>
+  &amp; \frac{e^{2i \theta} -  e^{-2i \theta}}{4i} \\<br>
+  &amp;= \frac{1}{2} sin \ 2  \theta \\<br>
+  sin \ \theta &amp;= 2 sin \frac{ \theta}{2} \cdot cos \frac{ \theta}{2}\\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+  $$<br>
+となるので，</p>
+<p>$$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  \frac{dy}{dx} &amp;=  -\frac{  sin \ \theta}{1 - cos \ \theta} \\<br>
+  &amp;= -\frac{2 sin \frac{ \theta}{2} \cdot cos \frac{ \theta}{2}}{2 sin^2 \frac{\theta}{2} } \\<br>
+  &amp;= -\frac{ cos \frac{ \theta}{2}}{ sin \frac{\theta}{2} } \\<br>
+  &amp;= -\frac{1}{tan \frac{\theta}{2} } \\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+$$</p>
+<p>まとめると，<br>
+  $$　<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  \frac{1}{tan \ \phi} &amp;= \frac{1}{tan \frac{\theta}{2} } \\<br>
+  \phi &amp;=  \frac{\theta}{2}<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+$$</p>
+<p>となり，<span class="Large-Bold-Red">Φはθの半分</span>という単純な関係で表すことができます．</p>
+<p>次に，<span class="Red-Bold">サイクロイド曲線の半径，a</span>,について考えていきます．特に最終地点で水平になる場合を考えていきます．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Brachistochrone curve-02.html"><img src="L-arrow.png" width="57" height="34" alt=""/></a></span><span class="style7"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Brachistochrone curve-04.html"><img src="R-arrow.png" width="57" height="34" alt=""/></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

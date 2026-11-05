@@ -1,0 +1,188 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>Brachistochrone curve</title>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED"> 最速降下曲線-04 - &quot;a&quot;，とは</p>
+<p class="Large-Bold-Red">&nbsp;</p>
+<p class="X-Large-Bold-RED">・a，とは</p>
+    <p>最速降下曲線は，</p>
+<p>$$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  x &amp;= a ( \theta - sin \ \theta)\\<br>
+  y &amp;= a (1 - cos \ \theta) \\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }<br>
+  $$</p>
+<p>となりました．この式はサイクロイド曲線なので，a,はサイクロイド曲線の半径となります．</p>
+<p>では，実際に，高さHから落下し，Lまで転げ落ちる場合のaとH，Lとの関係はどうなるのでしょう？</p>
+<p>実際のサイクロイド曲線は，</p>
+<p><img src="Fastest-11.png" width="574" height="487" alt=""/></p>
+<p>この図のように，a，を変化させることにより，<br>
+  <span class="Blue">落下途中<br>
+ちょうど水平<br>
+一旦下がって上昇</span><br>
+など，いろいろな場合が考えられます．</p>
+<p>高さ，到達水平距離，からaを求めたいが，どうもややこしいらしい計算になるのです(後ほど述べます)<br>
+ということで，<br>
+　<span class="Red-Bold">曲線の傾きが0となる点</span><br>
+を考えていきましょう．．</p>
+<p><img src="Fastest-10.png" width="600" height="404" alt=""/></p>
+<p>t=0，において，y=H，の場合を考えます．y軸の方向を正にとると，<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  x &amp;= a ( \theta - sin \ \theta)\\<br>
+  y &amp;= H - a (1 - cos \ \theta) \\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+$$</p>
+<p>最終地点，x=L，においては，<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  x &amp;=L = a ( \theta_L - sin \ \theta_L)\\<br>
+  y &amp;=0 = H - a (1 - cos \ \theta_L) \\<br>
+  H &amp;=  a (1 - cos \ \theta_L) \\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+$$</p>
+<p>となります．曲線の傾きは，</p>
+<p>$$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  \frac{dy}{dx} &amp;= \frac{\frac{dy}{d \theta}}{\frac{dx}{d \theta}} \\<br>
+  \frac{dx}{d \theta} &amp;= a (1 - cos \ \theta)\\<br>
+  \frac{dy}{d \theta} &amp;= -a \ sin \ \theta \\<br>
+\frac{dy}{dx} &amp;= \frac{-a \ sin \ \theta}{a (1 - cos \ \theta)} = -\frac{  sin \ \theta}{1 - cos \ \theta} \\<br>
+\end{split}<br>
+\end{equation}<br>
+}<br>
+$$</p>
+<p>傾きは，Lの時点で0となるので，</p>
+<p>$$<br>
+{ \Large \displaystyle <br>
+\begin{equation}<br>
+\begin{split}<br>
+  \left. \frac{dy}{dx} \right|_{\theta = \theta_L} &amp;= 0 \rightarrow sin \ \theta_L = 0 \\<br>
+  \theta_L =n \pi = \pi<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }<br>
+$$</p>
+<p>となります(1回目の水平なので，n=1)</p>
+<p>したがって，</p>
+<p>$$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  H &amp;= a (1 - cos \ \theta_L)  \\<br>
+  &amp;= a (1- (-1)) \\<br>
+  &amp;= 2a \\<br>
+  a &amp;= \frac{H}{2} \\<br>
+  L &amp;= a ( \theta_L - sin \ \theta_L)\\<br>
+  &amp;= a (\pi - 0) \\<br>
+  &amp;= \pi a \\<br>
+H &amp;= 2a, L = \pi a \rightarrow \frac{L}{H} = \frac{ \pi}{2} \\<br>
+L &amp;= \frac{ \pi}{2} H \\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+$$</p>
+<p>と，Hを設定すれば，a，Lを求めることができます．</p>
+<p>開始直後には，<br>
+  $$ <br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  \phi &amp;= 0 \rightarrow \theta = 0 \\<br>
+  \frac{dy}{dx} &amp;=  -\frac{  sin \ \theta}{1 - cos \ \theta} \\<br>
+  &amp;= -\frac{1}{tan \frac{\theta}{2} } \\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+  $$<br>
+θ=0の時点で，分母が0となるので，傾きは<span class="Large-Bold-Red">-∞</span>となります．</p>
+<p>もちろん，最終地点においては，傾きは<span class="Large-Bold-Red">0</span>となります．</p>
+<p><span class="Large-Bold-Red">到達時間</span>は，<a href="Brachistochrone curve-02.html">ここ</a>，で述べたように，</p>
+<p>微小時間と微小速度との関係は，$ dt = ds/v $，となるので，<br>
+$$<br>
+{ \Large \displaystyle <br>
+\begin{equation}<br>
+\begin{split}<br>
+ t &amp;= \sqrt{\frac{a}{g}}\  \theta \\<br>
+ \end{split}<br>
+\end{equation}<br>
+} <br>
+$$</p>
+<p>となるので，最終地点のθはπなので，</p>
+<p>$$<br>
+{ \Large \displaystyle <br>
+\begin{equation}<br>
+\begin{split}<br>
+T &amp;= \sqrt{\frac{a}{g}}\  \pi \\<br>
+&amp;=
+\sqrt{\frac{H}{2g}}\  \pi \\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  } <br>
+$$</p>
+<p>となります．</p>
+<p>H=1 m, g=9.8 m/s<sup>2</sup>，とすると，</p>
+<p>$$<br>
+{ \Large \displaystyle <br>
+\begin{equation}<br>
+\begin{split}<br>
+T &amp;=
+\sqrt{\frac{1}{2 \times 9.8}}\  \pi = 0.7096 \ s\\<br>
+\end{split}<br>
+\end{equation}<br>
+} <br>
+$$</p>
+<p>となります．</p>
+<p>次にこの場合において，<span class="Blue-Bold">直線状の傾斜を転げ落ちる場合の時間</span>を考えていきましょう．</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Brachistochrone curve-03.html"><img src="L-arrow.png" width="57" height="34" alt=""/></a></span><span class="style7"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Brachistochrone curve-05.html"><img src="R-arrow.png" width="57" height="34" alt=""/></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>Brachistochrone curve</title>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">最速降下曲線-01</p>
+<p class="Large-Bold-Red">&nbsp;</p>
+<p><span class="Large-Bold-Blue">最速降下曲線</span>とは，よく登場する曲線で，</p>
+<p>　<span class="Large-Bold-Red">ある２点間を重力などの影響で落下する場合にかかる時間が最も短い曲線</span></p>
+<p>の事をいいます（Wikiを参考にしました）</p>
+<p>色々なサイトに登場しますが，なかなかしっくり来なかったので，じっくりと考えてみました．</p>
+<p>&nbsp;</p>
+<p>注意すべき点は，</p>
+<p>　<span class="Red-Bold">高さH，距離L，で落下する場合には，曲線の形状によらず最終速度は同じ</span></p>
+<p>となります．これは<span class="Red-Bold">位置エネルギーが運動エネルギー</span>に変換されるだけなので．</p>
+<p>ちなみに，<span class="Blue-Bold">摩擦力，粘性抵抗，などは無視</span>，です．</p>
+<p>&nbsp;</p>
+<p>ほとんどのサイトに載っている計算方法は，</p>
+<p>　<span class="Blue-Bold">変分法</span></p>
+<p>を用いていますが，今回は変分法を用いずに，愚直な計算を行っていきます（Copilotには助けてもらいました）</p>
+<p>&nbsp;</p>
+<p class="X-Large-Bold-RED">・最短経路を検討する</p>
+<p class="X-Large-Bold-Blue">重力下で自由落下する物体の速度と位置</p>
+<p>原点に物体を設置します．いつもとは異なり，下向きに正のｙとします．</p>
+<p>$$<br>
+  { \Large \displaystyle <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  \alpha &amp;= g \\<br>
+  v &amp;= gt \\<br>
+  y &amp;= \frac{1}{2} gt^2 \\<br>
+  t^2 &amp;= \frac{2y}{g} \rightarrow t = \sqrt{\frac{2y}{g}}\\<br>
+  v &amp;= g \sqrt{\frac{2y}{g}} = \sqrt{2gy}\\\\<br>
+  \end{split}<br>
+\end{equation}<br>
+}<br>
+  $$<br>
+つまり，速度はyが大きくなるにつれて，徐々に大きくなります．当たり前といえば当たり前</p>
+<p>&nbsp;</p>
+<p class="X-Large-Bold-Blue">異なる速度域を最短時間で通過するには</p>
+<p>まずは単純に，２つの領域を考え，それぞれ異なる速度で通過する場合を考えます．</p>
+<p><img src="Fastest-01.png" width="699" height="307" alt=""/></p>
+<p> 図のように，幅ｈを異なる速度で通過する場合を考えます．このとき，</p>
+<p>  ${ \Large \displaystyle   v_1 &lt; v_2 }$</p>
+<p>  とします．まっすぐ通過するよりもできるだけ速い速度域を多く通過するほうが短い時間で通過できるので，</p>
+<p><img src="Fastest-02.png" width="704" height="475" alt=""/></p>
+<p>のような経路が最速となります．</p>
+<p>  　２L　：　開始と終了との距離<br>
+　x<sub>i</sub>　：　v<sub>i</sub>領域の通過距離 </p>
+<p>とすると，</p>
+<p> $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  x &amp;= vt  \rightarrow t = \frac{x}{v} \\<br>
+  sin \ \phi_1 &amp;= \frac{L-x}{x_1} \\<br>
+  x_1 &amp;= \frac{L-x}{sin \ \phi_1} = (L-x) \frac{\sqrt{(L-x)^2 + h^2}}{L-x} \\<br>
+  &amp;= \sqrt{(L-x)^2 + h^2} \\<br>
+  sin \ \phi_2 &amp;= \frac{L+x}{x_2} \\<br>
+  x_2 &amp;= \frac{L+x}{sin \ \phi_2} = (L+x) \frac{\sqrt{(L+x)^2 + h^2}}{L+x} \\<br>
+  &amp;= \sqrt{(L+x)^2 + h^2} \\<br>
+  t&amp;= \frac{\sqrt{(L-x)^2 + h^2}}{v_1} + \frac{\sqrt{(L+x)^2 + h^2}}{v_2}<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+  $$</p>
+<p>となる<span class="Blue-Bold">ｔを最小</span>とすればいいことになります．</p>
+<p> $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  ((L-x)^2 + h^2)^{1/2} \\<br>
+  \end{split}<br>
+\end{equation}<br>
+} <br>
+$$</p>
+<p>を考えます．</p>
+<p>$$<br>
+{ \Large \displaystyle <br>
+\begin{equation}<br>
+\begin{split}<br>
+  L - x &amp;\equiv z \rightarrow \frac{dx}{dz} = -1 \\<br>
+  \frac{d}{dx}((L-x)^2 + h^2)^{1/2} &amp;= \frac{d}{dz}\frac{dz}{dx}(z^2 + h^2)^{1/2}\\<br>
+  &amp;= -\frac{d}{dz}(z^2 + h^2)^{1/2}\\<br>
+  &amp;= -2z \cdot (- \frac{1}{2})(z^2 + h^2)^{-1/2}\\<br>
+  &amp;= \frac{L-x}{\sqrt{(L-x)^2 + h^2}} \\<br>
+  \end{split}<br>
+\end{equation}<br>
+} <br>
+$$</p>
+<p>同様に，</p>
+<p>  $$<br>
+{ \Large \displaystyle <br>
+\begin{equation}<br>
+\begin{split}<br>
+  \frac{d}{dx}((L+x)^2 + h^2)^{1/2} &amp;= -\frac{L+x}{\sqrt{(L+x)^2 + h^2}}\\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+  $$</p>
+<p>となるので，<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  \frac{L-x}{v_1 \sqrt{(L-x)^2 + h^2}} - \frac{L+x}{v_1 \sqrt{(L+x)^2 + h^2}} =0\\<br>
+  \frac{sin \ \phi_1}{v_1 } = \frac{sin \ \phi_2}{v_2} \\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+  $$<br>
+  となります．</p>
+<p>なにか見たことのあるような式．．．．．
+  ここで，屈折率を考えると，<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  n = \frac{C}{v}<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+  $$<br>
+  となるので（C:光速），上の式は，<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  n_1 \ sin \ \phi_1 = n_2 \ sin \ \phi_2\\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+  $$<br>
+という，<span class="X-Large-Bold-RED">”スネルの法則”</span>，そのものとなります！．</p>
+<p>&nbsp;</p>
+<p class="X-Large-Bold-RED">・　全体の曲線</p>
+<p><img src="Fastest-03.png" width="682" height="457" alt=""/></p>
+
+<p> ここで，下向きに，ｙを取っているので，</p>
+<p><br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  \alpha &amp;= g \\<br>
+  v &amp;= gt \\<br>
+  y &amp;= \frac{1}{2} gt^2 \\<br>
+  t^2 &amp;= \frac{2y}{g} \rightarrow t = \sqrt{\frac{2y}{g}}\\<br>
+  v &amp;= g \sqrt{\frac{2y}{g}} = \sqrt{2gy}\\\\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+  $$</p>
+<p>となり，<br>
+  時間とともに，速度が上昇する　＝　ｙ，の値が大きくなります．<br>
+  また，</p>
+<p> $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  \frac{sin \ \phi_1}{v_1 } = \frac{sin \ \phi_2}{v_2} = \frac{sin \ \phi_i}{v_i} = Const.\\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+  $$<br>
+  となるので，徐々に角度，$ \theta_i $，は大きくなります．<br>
+  図では，</p>
+<p><br>
+  $$<br>
+{ \Large \displaystyle <br>
+\begin{equation}<br>
+\begin{split}<br>
+  v_1 \ &lt; \ v_2 \ &lt; \ v_3 \ &lt; \ v_4 \\<br>
+  y_1 \ &lt; \ y_2 \ &lt; \ y_3 \ &lt; \ y_4 \\<br>
+  \phi_1 \ &lt; \ \phi_2 \ &lt; \ \phi_3 \ &lt; \ \phi_4 \\<br>
+  \end{split}<br>
+\end{equation}<br>
+} <br>
+$$</p>
+<p>となりますので，<span class="X-Large-Bold-RED">下凸</span>，のカーブとなりますね．　</p>
+<p>&nbsp;</p>
+<p>次ページに，この実際の曲線の式を求めていきましょう</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Brachistochrone curve-02.html"><img src="R-arrow.png" width="57" height="34" alt=""/></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

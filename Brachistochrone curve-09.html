@@ -1,0 +1,159 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>Brachistochrone curve</title>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p class="X-Large-Bold-RED">最速降下曲線-09 - 等時性</p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p>再度，</p>
+<p><span class="Large-Bold-Red">最終的に水平になる場合，θ<sub>L</sub>= π，</span></p>
+<p>を考えていきましょう．</p>
+<p>&nbsp;</p>
+<p><img src="Fastest-10.png" width="600" height="404" alt=""/></p>
+<p>&nbsp;</p>
+<p>$$<br>
+{ \Large \displaystyle <br>
+\begin{equation}<br>
+\begin{split}<br>
+ L &amp;= \frac{ \pi}{2} H \\<br>
+\end{split}<br>
+\end{equation}<br>
+} <br>
+$$</p>
+<p>今までに議論では，<br>
+　<span class="Blue-Bold">x(0)=0, y(0)=H</span><br>
+と<span class="Blue-Bold">最頂点からの落下</span>を考えていきました．</p>
+<p>では，<br>
+　<span class="Large-Bold-Blue">曲線の途中から始まった落下での時間</span><br>
+はどうなるのでしょう？</p>
+<p>二通りで考えていきましょう．</p>
+<p>&nbsp;</p>
+<p class="Large-Bold-Red">・解法-01</p>
+<p><span class="Blue-Bold">最下点から</span>の任意のθまでの距離（<span class="Blue">最下点からの距離であることに注意</span>）は，<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  s_{\pi \ to \ \theta} &amp;= -4a  \ cos \frac{\theta}{2} = -4a \ cos \phi \\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }<br>
+$$</p>
+<p>でした．マイナスが付くのは，最下点からの距離だからですね．<br>
+</p>
+<p>また，斜面に沿った重力加速度成分は，</p>
+<p><img src="Fastest-07.png" width="610" height="399" alt=""/><br>
+となります．</p>
+<p> $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  \alpha_s &amp;= g \ cos \ \phi \\<br>
+  cos \ \phi &amp;= -\frac{s}{4a} \\<br>
+  \alpha_s &amp;=  -\frac{g}{4a} s = \frac{d^2s}{dt^2}\\<br>
+  s &amp;= 
+  A \ cos \ \omega t + B \ sin \ \omega t \\<br>
+  \end{split}<br>
+\end{equation}<br>
+}
+<br>
+$$</p>
+<p>となります．</p>
+<p>初期条件として，速度は０なので，<br>
+$ { \Large \displaystyle  s(0) = s_0 , \frac{ds}{dt} (0) = 0 }$</p>
+<p>となるので，</p>
+<p>$$<br>
+{ \Large \displaystyle <br>
+\begin{equation}<br>
+\begin{split}<br>
+ s(t) &amp;= 
+  A \ cos \ \omega t + B \ sin \ \omega t \\<br>
+  s(0) &amp;= A = s_0 \\
+  <br>
+  s'(t) &amp;= - \omega \ A \ sin \ \omega t + \omega \ B \ cos \ \omega t \\<br>
+s'(0) &amp;= \omega \ B = 0 \rightarrow B=0 \\<br>
+s(t) &amp;= 
+s_0 \ cos \ \omega t  \\ <br>
+  \end{split}<br>
+  \end{equation}<br>
+  } <br>
+$$</p>
+<p>となり，これは実は<span class="Large-Bold-Red">単振動</span>と同じ式となります（説明は後ほど）．</p>
+<p>単振動の場合，周期（時間）は一に依存しませんでしたよね．</p>
+<p>最下点では，sが０となるので（<span class="Blue">最下点からの距離であることに注意</span>），<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  s &amp;= s_0 \ cos \omega t = 0\\<br>
+  \omega t &amp;= \frac{\pi}{2} \\<br>
+  t &amp;= \frac{\pi}{2 \omega} = \frac{\pi}{2 }\sqrt{ \frac{4a}{g}} \\<br>
+  &amp;= \pi \sqrt{ \frac{a}{g}} <br>
+  \end{split}<br>
+  \end{equation}<br>
+  }<br>
+$$</p>
+<p>となり，時間ｔの式には，初期条件，$ { \Large \displaystyle s_0 }$　，が含まれなくなっちゃいます．</p>
+<p><br>
+  したがって，どの位置から落下させても同じ時間となることになります．</p>
+<p>さらに，<a href="Brachistochrone curve-08.html">ここ</a>，でもとめた到達時間，最頂点，Hからの到達時間は，</p>
+<p>$$<br>
+{ \Large \displaystyle <br>
+\begin{equation}<br>
+\begin{split}<br>
+T = \sqrt{\frac{H}{g(1 - cos \ \theta_f)}} \theta_f \\<br>
+\end{split}<br>
+\end{equation}<br>
+}<br>
+$$</p>
+<p>において，</p>
+<p>$$<br>
+{ \Large \displaystyle <br>
+\begin{equation}<br>
+\begin{split}<br>
+T &amp;= \sqrt{\frac{H}{g(1 - cos \ \theta_f)}} \theta_f \\<br>
+\theta_f &amp;= \pi \\<br>
+T &amp;= \sqrt{\frac{H}{2g}} \pi \\<br>
+a &amp;= \frac{H}{2} \\<br>
+T &amp;= \sqrt{\frac{2a}{2g}} \pi = \sqrt{\frac{a}{g}} \pi \\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }<br>
+$$</p>
+<p>と同じになります．</p>
+<p>&nbsp;</p>
+<p>動画も作りましたので，<a href="http://127.0.0.1:59473/content/lgPLmRqYzUbj4GjjAAAP/bzv64hT/Dr8Cudr/XZjusgM/4lDIv67/sKdmzzi/RTbR6L4/Movies.html">ここ</a>，からどうぞ．</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Brachistochrone curve-08.html"><img src="L-arrow.png" width="57" height="34" alt=""/></a></span><span class="style7"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

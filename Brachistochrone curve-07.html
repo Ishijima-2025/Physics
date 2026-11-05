@@ -1,0 +1,108 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>Brachistochrone curve</title>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">最速降下曲線-07　ー　<span class="Large-Bold-Red">最終的に水平ではない場合</span></p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p>では，<span class="Large-Bold-Red">最終的に水平ではない場合，</span>どのように計算すればいいのでしょう？</p>
+<p>実際，計算してみると，最終的に水平でない場合も，サイクロイド曲線が最速降下曲線であることがわかります．</p>
+<p><img src="Fastest-13.png" width="619" height="544" alt=""/></p>
+<p>L=π/2 (最終的に水平になる場合），L=1, L=2で計算した結果です．</p>
+<p>色付き丸はサイクロイド曲線に沿った降下カーブ，白抜き◯は直線を降下したカーブとなります．</p>
+<p>&nbsp;</p>
+<p class="X-Large-Bold-RED"> 計算方法</p>
+<p>サイクロイド曲線は，高さHからの場合，</p>
+<p>$$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  x &amp;= a ( \theta - sin \ \theta)\\<br>
+  y &amp;= H - a (1 - cos \ \theta) \\  \\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+$$</p>
+<p>なので，高さHから横Lまでの最短経路における，終点のパラメータ，<span class="Large-Bold-Blue">$ \theta_f $</span>，は，<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  y &amp;= 0  \rightarrow <br>
+  H  = a (1 - cos \ \theta_f)  \\<br>
+  L &amp;= a ( \theta_f - sin \ \theta_f)\\<br>
+  \frac{L}{H} &amp;= \frac{ \theta_f - sin \ \theta_f}{1 - cos \ \theta_f }<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+  $$<br>
+  を解いて，<span class="Large-Bold-Blue">$ \theta_f $</span>，を求め，<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  a &amp;= \frac{H}{1 - cos \ \theta_f} \\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+  $$</p>
+<p>から，<span class="Large-Bold-Blue">a</span>，を求めればいいことになります．</p>
+<p>  しかし，この計算の<span class="Blue-Bold">解析解は計算できません</span>，したがって，<br>
+  <span class="Blue-Bold">エクセル</span>　：　<span class="Red-Bold">ゴールシーク</span><br>
+  <span class="Blue-Bold">Labview</span>　：　f(x)全ゼロ検索 (Mathematics -&gt; Script &amp; Formula -&gt; Zeros -&gt; <span class="Red-Bold">Find All Zero</span>)<br>
+  を使って計算することになります．</p>
+<p>エクセルのゴールシークは，便利ですが，初期値に依存したり，自動計算できないのでちょっと厄介です．</p>
+<p>&nbsp;</p>
+<p>Lを変えてみるとそれぞれのパラメータがどう変わるでしょう？</p>
+<p><span class="Large-Bold-Blue">$ \theta_f $</span></p>
+<p><img src="Fastest-14.png" width="680" height="471" alt=""/></p>
+<p>Lが大きくなると，徐々に大きくなることがわかります．</p>
+<p>&nbsp;</p>
+<p>　<span class="Large-Bold-Blue">a</span></p>
+<p><img src="Fastest-15.png" width="686" height="475" alt=""/></p>
+<p>a，サイクロイドの半径は，L=π/2 (最終的に水平になる場合），で最小値を示すことがわかります．</p>
+<p>&nbsp;</p>
+<p class="Large-Bold-Blue">到達時間</p>
+<p><img src="Fastest-16.png" width="693" height="480" alt=""/></p>
+<p>次ページに述べますが，到達時間は，Lが大きくなると徐々に差が開いていくことがわかります</p>
+<p>　<span class="Blue-Bold">Lが小さい</span>　：　ほぼ直線落下なので差がないのですね．<br>
+　<span class="Blue-Bold">Lが大きい</span>　：　究極はサイクロイド1周分，元の高さに戻る場合で，直線は水平になるので，直線の場合の到達時間は無限大になちゃいます．</p>
+<p>&nbsp;</p>
+<p>動画も作りましたので，<a href="http://127.0.0.1:59473/content/lgPLmRqYzUbj4GjjAAAP/bzv64hT/Dr8Cudr/XZjusgM/4lDIv67/sKdmzzi/RTbR6L4/Movies.html">ここ</a>，からどうぞ．</p>
+<p>&nbsp;</p>
+<p>次ページは，<span class="Blue-Bold">到達時間</span>，に関して考えていきます．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Brachistochrone curve-06.html"><img src="L-arrow.png" width="57" height="34" alt=""/></a></span><span class="style7"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Brachistochrone curve-08.html"><img src="R-arrow.png" width="57" height="34" alt=""/></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

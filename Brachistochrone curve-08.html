@@ -1,0 +1,141 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>Brachistochrone curve</title>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">最速降下曲線-08　-　到達時間</p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p><span class="Large-Bold-Red">到達時間</span></p>
+<p>まず基本は，</p>
+<p> $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  \alpha &amp;= g \\<br>
+  v &amp;= gt \\<br>
+  y &amp;= \frac{1}{2} gt^2 \\<br>
+  t^2 &amp;= \frac{2y}{g} \rightarrow t = \sqrt{\frac{2y}{g}}\\<br>
+  v &amp;= g \sqrt{\frac{2y}{g}} = \sqrt{2gy}\\\\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+$$</p>
+<p>最速降下曲線は，</p>
+<p>$$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+x &amp;= a ( \theta - sin \ \theta)\\<br>
+y &amp;= a (1 - cos \ \theta) \\<br>
+\end{split}<br>
+\end{equation}<br>
+} <br>
+$$</p>
+<p>となるので，θで微分すると，</p>
+<p>$$<br>
+{ \Large \displaystyle <br>
+\begin{equation}<br>
+\begin{split}<br>
+  dx &amp;= a ( 1 - cos \ \theta) \ d \ \theta\\<br>
+dy &amp;= a sin \ \theta \ d \ \theta\\<br>
+\end{split}<br>
+\end{equation}<br>
+} <br>
+$$</p>
+<p>微小変位，ds，は，</p>
+<p>$$<br>
+{ \Large \displaystyle <br>
+\begin{equation}<br>
+\begin{split}<br>
+  ds^2 &amp;= dx^2 + dy^2 = a^2 [( 1 - cos \ \theta)^2 + sin^2 \ \theta]  \ d \ \theta^2\\<br>
+  &amp;= a^2[1 - 2 \ cos \ \theta + cos^2 \ \theta + sin^2 \ \theta] \ d \ \theta^2\\<br>
+  &amp;= 2a^2 [1 -  cos \ \theta] \ d \ \theta^2\\<br>
+  ds &amp;= a \sqrt{2(1 -  cos \ \theta)} \ d \ \theta\\<br>
+  &amp;= a \sqrt{2 \cdot 2 sin^2 \ \frac{\theta}{2}} \ d \ \theta\\<br>
+  &amp;= 2a \  sin \ \frac{\theta}{2} \ d \ \theta\\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+$$</p>
+<p>ｙの式を書き換えると，</p>
+<p>$$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  y &amp;= a (1 - cos \ \theta) \\<br>
+  &amp;= 2a \ sin^2 \ \frac{\theta}{2}<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+$$</p>
+<p>から，<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  ds &amp;= 2a \  sin \ \frac{\theta}{2} \ d \ \theta\\<br>
+  y &amp;= 2a \ sin^2 \ \frac{\theta}{2} \\<br>
+  v &amp;=  \frac{ds}{dt} = \sqrt{2gy}\\<br>
+  &amp;= 2 \sqrt{ag} sin \ \frac{\theta}{2}\\<br>
+  &amp;= 2 \sqrt{ag} \frac{ds}{2a \ d \theta} \\<br>
+  &amp;= \sqrt{\frac{g}{a}} \frac{ds}{ d \theta} \\<br>
+  dt &amp;= \frac{ds}{v} = \sqrt{\frac{a}{g}}  d \theta<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+$$</p>
+<p>積分すると，<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  T &amp;= \int dt = \int_0^{\theta_f} \sqrt{\frac{a}{g}}  d \theta = \sqrt{\frac{a}{g}} \theta_f \\<br>
+  &amp;= \sqrt{\frac{H}{g(1 - cos \ \theta_f)}} \theta_f \\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }<br>
+$$</p>
+<p>となります．．</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="Large-Bold-Blue">到達時間</p>
+<p><img src="Fastest-16.png" width="693" height="480" alt=""/></p>
+<p>&nbsp;</p>
+<p>次ページは，，<span class="Large-Bold-Blue">等時性</span>，に関して考えていきます．</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Brachistochrone curve-07.html"><img src="L-arrow.png" width="57" height="34" alt=""/></a></span><span class="style7"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Brachistochrone curve-09.html"><img src="R-arrow.png" width="57" height="34" alt=""/></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

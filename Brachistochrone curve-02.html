@@ -1,0 +1,249 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>Brachistochrone curve</title>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">最速降下曲線-02 - 曲線の導出</p>
+<p class="Large-Bold-Red">&nbsp;</p>
+<p class="X-Large-Bold-RED">・曲線の導出</p>
+    <p><img src="Fastest-04.png" width="673" height="388" alt=""/></p>
+<p>&nbsp;</p>
+<p>上記の式と速度とｙとの関係式から，</p>
+<p>$$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  \frac{sin \ \phi}{v} &amp;= C\\<br>
+  v &amp;=  \sqrt{2gy}\\<br>
+  \frac{sin \ \phi}{\sqrt{2gy}} &amp;= C\\<br>
+  sin^2 \ \phi &amp;= 2 \ g \ y \ C^2 \rightarrow C^2 y\\<br>
+  tan \ \phi &amp;= \frac{dx}{dy} \\<br>
+  tan^2 \ \phi &amp;= \frac{sin^2 \ \phi}{cos^2 \ \phi} = \frac{sin^2 \ \phi}{1 - sin^2 \ \phi} \\<br>
+  \end{split}<br>
+\end{equation}<br>
+}<br>
+$$</p>
+<p>となります．ここで，<span class="Blue-Bold">定数C</span>を，</p>
+<p>  $$<br>
+{ \Large \displaystyle <br>
+\begin{equation}<br>
+\begin{split}<br>
+  C^2 \equiv \frac{1}{2a} \\<br>
+  \end{split}<br>
+\end{equation}<br>
+}<br>
+$$</p>
+<p>とおけば，</p>
+<p>$$<br>
+{ \Large \displaystyle <br>
+\begin{equation}<br>
+\begin{split}<br>
+  \left( \frac{dx}{dy}  \right)^2&amp;= \frac{C^2 y }{1 - C^2 y} \\<br>
+  \frac{dx}{dy}   &amp;= \sqrt{ \frac{y/(2a)}{1- y/(2a)}} =\sqrt{ \frac{y}{2a - y}}<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }<br>
+  $$</p>
+<p>となる，ｘ，ｙを求めればいいことになります．．xは積分すればいいので，</p>
+<p><br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  x &amp;= \int \sqrt{ \frac{y}{2a - y}} \ dy<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+  $$</p>
+<p>を計算すればよいことになります．</p>
+<p>$$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  u &amp;\equiv  \sqrt{ \frac{y}{2a - y}} \\<br>
+  \end{split}<br>
+\end{equation}<br>
+}<br>
+$$</p>
+<p>とすると，</p>
+<p>$$<br>
+{ \Large \displaystyle <br>
+\begin{equation}<br>
+\begin{split}<br>
+  u^2 &amp;= \frac{y}{2a - y} \\<br>
+  2a u^2 -u^2 y &amp;= y \\<br>
+  y &amp;= \frac{2a u^2}{1 + u^2} \\<br>
+  \frac{dy}{du} &amp;= \frac{4a u}{1 + u^2} - \frac{4a u^3}{(1 + u^2)^2} \\<br>
+  &amp;=  \frac{4au + 4au^3 -4a u^3}{(1 + u^2)^2} \\<br>
+  &amp;=  \frac{4au }{(1 + u^2)^2} \\<br>
+  \frac{dx}{dy}   &amp;= u = \sqrt{ \frac{y}{2a - y}} \\<br>
+  dx &amp;= u \ dy = \frac{4au^2 }{(1 + u^2)^2} \ du \\<br>
+  x &amp;= 4a \int  \frac{u^2 }{(1 + u^2)^2} \ du \\<br>
+  &amp;= 4a   \left( \frac{1}{2} tan^{-1} \ u - \frac{u}{2(1 + u^2)} \right)   \\<br>
+  &amp;= 2a   \left(  tan^{-1} \ u - \frac{u}{(1 + u^2)} \right)   \\<br>
+  y &amp;= \frac{2a u^2}{1 + u^2} \\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }<br>
+  $$</p>
+<p>ここで，</p>
+<p>$$
+  <br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  u &amp;\equiv tan \ \frac{\theta}{2} \rightarrow \theta = 2 \ tan^{-1} \ u \\<br>
+  \frac{2u}{1 + u^2} &amp;= \frac{2 \ tan ( \theta/2)}{1 + tan^2 ( \theta/2)} =<br>
+  \frac{2 \ \frac{sin ( \theta/2)}{ cos (\theta/2)}}{\frac{cos^2 ( \theta/2)}{( cos^2\theta/2)} + \frac{sin^2 ( \theta/2)}{ cos^2 (\theta/2)}} \\<br>
+  &amp;= 2 \ \frac{sin ( \theta/2)}{ cos (\theta/2)} \ cos^2 (\theta/2) = 2 sin ( \theta/2) \cdot cos (\theta/2) \\<br>
+  sin \ \theta \cdot cos \ \theta &amp;= \frac{ e^{i \theta} + e^{-i \theta}}{2} \cdot \frac{ e^{i \theta} - e^{-i \theta}}{2i} \\<br>
+  &amp;= \frac{ e^{2i \theta} - e^{-2i \theta}}{4i} = \frac{1}{2} sin ( 2 \theta) \\<br>
+  \frac{2u}{1 + u^2} &amp;=2 sin ( \theta/2) \cdot cos (\theta/2) = sin \ \theta \\<br>
+  2 \ tan^{-1} \ u &amp;=  \theta \\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+$$</p>
+<p>また，<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  u &amp;\equiv tan \ \frac{\theta}{2} \rightarrow \theta = 2 \ tan^{-1} \ u \\<br>
+  \frac{u^2}{1 + u^2} &amp;= \frac{ \ tan^2 ( \theta/2)}{1 + tan^2 ( \theta/2)} =<br>
+  \frac{ \ \frac{sin^2 ( \theta/2)}{ cos^2 (\theta/2)}}{\frac{cos^2 ( \theta/2)}{( cos^2\theta/2)} + \frac{sin^2 ( \theta/2)}{ cos^2 (\theta/2)}} \\<br>
+  &amp;=  \frac{sin^2 ( \theta/2)}{ cos^2 (\theta/2)} \ cos^2 (\theta/2) =  sin^2 ( \theta/2)  \\<br>
+  sin^2 \ \theta  &amp;=  \left( \frac{ e^{i \theta} - e^{-i \theta}}{2i} \right)^2\\<br>
+  &amp;= - \frac{ e^{2i \theta} - 2 + e^{-2i \theta}}{4} \\<br>
+  &amp;=  \frac{ 1}{2} -  \frac{ e^{2i \theta} + e^{-2i \theta}}{4} \\<br>
+  &amp;=  \frac{ 1}{2} -  \frac{ cos (2 \theta)}{2} \\<br>
+  2 sin^2 \ \frac{\theta}{2}  &amp;= 1 - cos \ \theta<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+  $$</p>
+<p>となるので，</p>
+<p>$$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  x &amp;= 2a   \left(  tan^{-1} \ u - \frac{u}{(1 + u^2)} \right)   \\<br>
+  &amp;= a ( \theta - sin \ \theta)\\<br>
+  y &amp;= \frac{2a u^2}{1 + u^2} \\<br>
+  &amp;= a (1 - cos \ \theta)<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+  $$</p>
+<p>x,yは，</p>
+<p>$$<br>
+{ \Large \displaystyle <br>
+\begin{equation}<br>
+\begin{split}<br>
+x &amp;= a ( \theta - sin \ \theta)\\<br>
+y &amp;= a (1 - cos \ \theta) \\<br>
+\end{split}<br>
+\end{equation}<br>
+} <br>
+$$</p>
+<p>となり，この曲線は，<span class="X-Large-Bold-RED">サイクロイド</span>，と呼びます．</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="X-Large-Bold-RED">・時間との関係</p>
+<p>では，この，<span class="X-Large-Bold-Blue">θ</span>，はどのような時間変化をするのでしょう？<br>
+  必要な式をまとめると，</p>
+<p>$$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  x &amp;= a ( \theta - sin \ \theta)\\<br>
+  y &amp;= a (1 - cos \ \theta) \\<br>
+  v &amp;=  \sqrt{2gy}\\<br>
+  &amp;= \sqrt{2ga (1 - cos \ \theta) }\\<br>
+  &amp;\left( 2 sin^2 \ \frac{\theta}{2}  = 1 - cos \ \theta \right) \\<br>
+  &amp;= \sqrt{2ga  } \ sin \ \frac{\theta}{2}\\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+  $$</p>
+<p>曲線上の微小距離 dsは，<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  x &amp;= a ( \theta - sin \ \theta)\\<br>
+  dx &amp;= a ( 1 - cos \ \theta)\\<br>
+  y &amp;= a (1 - cos \ \theta) \\<br>
+  dy &amp;= a sin \ \theta \\<br>
+  ds^2 &amp;= dx^2 + dy^2 = a^2 [( 1 - cos \ \theta)^2 + sin^2 \ \theta]  \ d \ \theta^2\\<br>
+  &amp;= a^2[1 - 2 \ cos \ \theta + cos^2 \ \theta + sin^2 \ \theta] \ d \ \theta^2\\<br>
+  &amp;= 2a^2 [1 -  cos \ \theta] \ d \ \theta^2\\<br>
+  ds &amp;= a \sqrt{2(1 -  cos \ \theta)} \ d \ \theta\\<br>
+  &amp;= a \sqrt{2 \cdot 2 sin^2 \ \frac{\theta}{2}} \ d \ \theta\\<br>
+  &amp;= 2a \  sin \ \frac{\theta}{2} \ d \ \theta\\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+  $$</p>
+<p>微小時間と微小速度との関係は，$ dt = ds/v $，となるので，<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  dt &amp;= \frac{2a \ sin ( \theta/2)}{\sqrt{2ga  } \ sin \ ( \theta/2)} \ d \ \theta \\<br>
+  &amp;= \sqrt{\frac{a}{g}}\ d \ \theta \\<br>
+  t &amp;= \sqrt{\frac{a}{g}}\  \theta \\<br>
+  \theta &amp;= \sqrt{\frac{g}{a}} \ t = \omega t \left( \omega \equiv \sqrt{\frac{g}{a}} \right) \\<br>
+  x &amp;= a ( \omega t - sin \ \omega t)\\<br>
+  y &amp;= a (1 - cos \ \omega t) \\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+  $$</p>
+<p>となり，</p>
+<p class="Red-Bold">　一定角速度で回転<br>
+　　＋<br>
+　ｘ方向に一定速度で進行</p>
+<p>する曲線となります．</p>
+<p><img src="cycloid-01.png" width="994" height="469" alt=""/></p>
+<p>動画も作りましたので，<a href="Movies.html">ここ</a>，からどうぞ．</p>
+<p>次ページに，θとΦとの関係を明らかにしていきましょう．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Brachistochrone curve-01.html"><img src="L-arrow.png" width="57" height="34" alt=""/></a></span><span class="style7"><a href="Brachistochrone curve-01.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Brachistochrone curve-03.html"><img src="R-arrow.png" width="57" height="34" alt=""/></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

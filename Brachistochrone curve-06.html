@@ -1,0 +1,113 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>Brachistochrone curve</title>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">最速降下曲線-06　-　<span class="Large-Bold-Red">最終的に水平になる場合</span></p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p>では，<span class="Large-Bold-Red">最終的に水平になる場合，θ<sub>L</sub>= π</span>，曲線に沿って，どの程度の距離を移動するのでしょうか？</p>
+<p>&nbsp;</p>
+<p class="X-Large-Bold-RED"> 弧長</p>
+<p><img src="Fastest-06.png" width="690" height="471" alt=""/></p>
+<p>曲線の上のある一点のθを，<span class="Large-Bold-Red">θ<sub>p</sub></span>，とします．</p>
+<p> 曲線上の微小距離<span class="Large-Bold-Blue"> ds</span>は，<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  x &amp;= a ( \theta - sin \ \theta)\\<br>
+  dx &amp;= a ( 1 - cos \ \theta) \ d \ \theta\\<br>
+  y &amp;= a (1 - cos \ \theta) \\<br>
+  dy &amp;= a \ sin \ \theta \ d \ \theta\\<br>
+  ds^2 &amp;= dx^2 + dy^2 = a^2 [( 1 - cos \ \theta)^2 + sin^2 \ \theta]  \ d \ \theta^2\\<br>
+  &amp;= a^2[1 - 2 \ cos \ \theta + cos^2 \ \theta + sin^2 \ \theta] \ d \ \theta^2\\<br>
+  &amp;= 2a^2 [1 -  cos \ \theta] \ d \ \theta^2\\<br>
+  ds &amp;= a \sqrt{2(1 -  cos \ \theta)} \ d \ \theta\\<br>
+  &amp;= a \sqrt{2 \cdot 2 sin^2 \ \frac{\theta}{2}} \ d \ \theta\\<br>
+  &amp;= 2a \  sin \ \frac{\theta}{2} \ d \ \theta\\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+  $$</p>
+<p>となります．<span class="Blue-Bold">最下点からの距離</span>は，<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  L_{\pi \ to \ \theta_p} &amp;= \int_{\pi}^{\theta_p} 2a \  sin \ \frac{\theta}{2} \ d \ \theta\\<br>
+  &amp;= -2a \left[ 2 \ cos \frac{\theta}{2} \right]_{ \pi}^{ \theta_p} \\<br>
+  &amp;= -2a \left[ 2 \ cos \frac{\theta_p}{2} - 2 \ cos \frac{\pi}{2}\right]\\<br>
+  &amp;= -4a  \ cos \frac{\theta_p}{2} \\<br>
+  &amp;= 4a  \ cos \frac{\theta_p}{2}<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+$$</p>
+<p><br>
+  最後の展開でマイナスからプラスになったのは，右から左の積分なので実際はプラスとなります．</p>
+<p><span class="Blue-Bold">開始点からの距離</span>は，<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  L_{0 \ to \ \theta_p} &amp;= \int_0^{\theta_p} 2a \  sin \ \frac{\theta}{2} \ d \ \theta\\<br>
+  &amp;= -2a \left[ 2 \ cos \frac{\theta}{2} \right]_{ 0}^{ \theta_p} \\<br>
+  &amp;= -2a \left[ 2 \ cos \frac{\theta_p}{2} - 2 \ cos \frac{0}{2}\right]\\<br>
+  &amp;= -4a  \ cos \frac{\theta_p}{2} +4a<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+$$</p>
+<p><span class="Blue-Bold">全体の距離</span>は，<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  L_{start \ to \ end} &amp;= \int_0^{\pi} 2a \  sin \ \frac{\theta}{2} \ d \ \theta\\<br>
+  &amp;= -2a \left[ 2 \ cos \frac{\theta}{2} \right]_{ 0}^{ \pi} \\<br>
+  &amp;= -2a \left[ 2 \ cos \frac{\pi}{2} - 2 \ cos \frac{0}{2}\right]\\<br>
+  &amp;= 4a<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+  $$<br>
+となります．</p>
+<p>&nbsp;</p>
+<p>次ページは，<span class="Blue-Bold">最終的に水平ではない場合</span>，を考えていきましょう</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Brachistochrone curve-05.html"><img src="L-arrow.png" width="57" height="34" alt=""/></a></span><span class="style7"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span><a href="Brachistochrone curve-07.html"><img src="R-arrow.png" width="57" height="34" alt=""/></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

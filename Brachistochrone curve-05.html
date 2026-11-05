@@ -1,0 +1,202 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  },
+  TeX: {
+    extensions: ["mhchem.js"]
+  },
+  CommonHTML: {
+    matchFontHeight: false
+  }
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+	
+
+
+
+<link href="160324.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.style7 {color: #000000; }
+</style>
+<title>Brachistochrone curve</title>
+</head>
+
+<body>
+<p class="X-Large-Bold-RED">最速降下曲線-05 - <span class="Large-Bold-Red">高さH,距離Lの場合</span></p>
+<p class="X-Large-Bold-RED">&nbsp;</p>
+<p><span class="Large-Bold-Blue">直線状を進む場合</span>を考えていきます．</p>
+<p>&nbsp;</p>
+    <p class="Large-Bold-Red">・高さH,距離Lの場合</p>
+    <p><img src="Fastest-09.png" width="655" height="422" alt=""/></p>
+    <p>&nbsp;</p>
+    <p> $$<br>
+      { \Large \displaystyle      <br>
+      \begin{equation}<br>
+      \begin{split}<br>
+      tan \ \psi &amp;= \frac{H}{L}  \\<br>
+      \alpha_{s} &amp;= g \ sin \ \psi <br>
+      \end{split}<br>
+      \end{equation}<br>
+      }<br>
+      $$</p>
+    <p>斜面方向の速度，変位は，<br>
+      $$<br>
+      { \Large \displaystyle      <br>
+      \begin{equation}<br>
+      \begin{split}<br>
+      \alpha_{s} &amp;= g \ sin \ \psi  \\<br>
+      v_s(t) &amp;= \alpha_2 \ t \\<br>
+      s(t) &amp;= \frac{1}{2} \alpha_s \ t^2 \\<br>
+      \end{split}<br>
+      \end{equation}<br>
+      }
+      <br>
+      $$<br>
+      xy方向の変位は，<br>
+      $$<br>
+      { \Large \displaystyle      <br>
+      \begin{equation}<br>
+      \begin{split}<br>
+      x_s(t) &amp;= s(t) \ cos \ \psi \\<br>
+      y_s(t) &amp;= H - s(t) \ sin \ \psi \\<br>
+      \end{split}<br>
+      \end{equation}<br>
+      }
+      <br>
+$$</p>
+    <p>到達時間は，<br>
+      $$<br>
+      { \Large \displaystyle      <br>
+      \begin{equation}<br>
+      \begin{split}<br>
+      y_s(t) &amp;= H - s(t) \ sin \ \psi = 0 \\<br>
+      H &amp;= \frac{1}{2}  \ \alpha_{s} \ t^2 sin \ \psi \\<br>
+  &amp;= \frac{1}{2}  g \ sin \ \psi \ t^2 sin \ \psi \\<br>
+  &amp;= \frac{1}{2}  g \ sin^2 \ \psi \ t^2  \\<br>
+      t^2 &amp;= \frac{2H}{g \ sin^2 \ \psi}\\<br>
+      t &amp;= \sqrt{\frac{2H}{g }}\frac{1}{ sin \psi}\\<br>
+      \end{split}<br>
+      \end{equation}<br>
+      }
+      <br>
+$$</p>
+<p>となります．</p>
+<p>&nbsp;</p>
+<p><span class="Large-Bold-Red">・高さH,距離L=π/2 Hの場合</span></p>
+<p>この場合には，高さ0で最速落下曲線が水平になる場合でした．</p>
+<p><img src="Fastest-08.png" width="587" height="370" alt=""/></p>
+<p>高さH，距離L＝π/2 H，を考えればいいので，</p>
+<p>$$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  tan \ \psi &amp;= \frac{H}{L} = \frac{2}{\pi} \\<br>
+  \alpha_{s} &amp;= g \ sin \ \psi = g \ \frac{H}{\sqrt{H^2 + (\frac{ \pi}{2} H})^2} \\<br>
+  &amp;= g \frac{1}{\sqrt{1 + \frac{\pi^2}{4}}} = g \frac{1}{\sqrt{ \frac{4 + \pi^2}{4}}}= g \frac{2}{\sqrt{ 4 + \pi^2}}<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+$$</p>
+<p>斜面方向の速度，変位は，<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  \alpha_{s} &amp;=  g \frac{2}{\sqrt{ 4 + \pi^2}} \\<br>
+  v_s(t) &amp;= \alpha_2 \ t \\<br>
+  s(t) &amp;= \frac{1}{2} \alpha_s \ t^2 \\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+$$</p>
+<p><br>
+  xy方向の変位は，<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  x_s(t) &amp;= s(t) \ cos \ \psi \\<br>
+  y_s(t) &amp;= H - s(t) \ sin \ \psi \\<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+$$</p>
+<p>到達時間は，<br>
+  $$<br>
+  { \Large \displaystyle  <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  y_s(t) &amp;= H - s(t) \ sin \ \psi = 0 \\<br>
+  H &amp;= \frac{1}{2} g \frac{2}{\sqrt{ 4 + \pi^2}} \ t^2 sin \ \psi \\<br>
+  &amp;= \frac{1}{2} g \frac{2}{\sqrt{ 4 + \pi^2}} \ t^2 \frac{2}{\sqrt{ 4 + \pi^2}} \\<br>
+  &amp;= g \frac{2}{ 4 + \pi^2} \ t^2 \\<br>
+  t &amp;= \sqrt{\frac{H(4 + \pi^2)}{2g}}<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+$$</p>
+<p>となります．</p>
+<p>先程の式に代入しても，</p>
+<p>$$<br>
+{ \Large \displaystyle <br>
+\begin{equation}<br>
+\begin{split}<br>
+ t &amp;= \sqrt{\frac{2H}{g }}\frac{1}{ sin \psi}\\<br>
+ tan \ \psi &amp;= \frac{H}{L}  = \frac{1}{\pi/2}\\<br>
+ sin \ \psi &amp;= \frac{1}{\sqrt{1+ ( \pi/2)^2}}  \\<br>
+ t &amp;= \sqrt{\frac{2H}{g }} \sqrt{1+ ( \pi/2)^2}= \sqrt{\frac{2H}{g }} \sqrt{\frac{4 + \pi^2}{4}} = \sqrt{\frac{H(4 + \pi^2)}{2g}}\\<br>
+\end{split}<br>
+\end{equation}<br>
+} <br>
+$$</p>
+<p>と一致します．</p>
+<p>&nbsp;</p>
+<p>$ { \Large \displaystyle H = 1 m, g = 9.8 m/s^2 }$，とすると，</p>
+<p>  直線では，</p>
+<p>  $$<br>
+  { \Large \displaystyle <br>
+  \begin{equation}<br>
+  \begin{split}<br>
+  t &amp;= \sqrt{\frac{H(4 + \pi^2)}{2g}} \\<br>
+  &amp;= \sqrt{\frac{1 \times (4 + \pi^2)}{2 \times 9.8}} \\<br>
+  &amp;= 0.84 s<br>
+  \end{split}<br>
+  \end{equation}<br>
+  }
+  <br>
+$$</p>
+<p>サイクロイド曲線では，</p>
+<p>$$<br>
+{ \Large \displaystyle <br>
+\begin{equation}<br>
+\begin{split}<br>
+T &amp;=
+\sqrt{\frac{H}{2g}}\  \pi \\<br>
+&amp;= \sqrt{\frac{1}{2 \times 9.8}}\  \pi = 0.7096 \ s\\<br>
+\end{split}<br>
+\end{equation}<br>
+} <br>
+$$</p>
+<p><br>
+  と，サイクロイド曲線を進むほうが早く進むことになります．</p>
+<p><img src="Fastest-12.png" width="576" height="488" alt=""/></p>
+<p>&nbsp;</p>
+<p>動画も作りましたので，<a href="http://127.0.0.1:59473/content/lgPLmRqYzUbj4GjjAAAP/bzv64hT/Dr8Cudr/XZjusgM/4lDIv67/sKdmzzi/RTbR6L4/Movies.html">ここ</a>，からどうぞ．</p>
+<p>次ページは，<span class="Blue-Bold">最終的に水平になる場合の曲線に沿った移動距離</span>，を考えていきます．</p>
+<p>&nbsp;</p>
+<p><span class="style7"><a href="Brachistochrone curve-04.html"><img src="L-arrow.png" width="57" height="34" alt=""/></a></span><span class="style7"><a href="index.html"><img src="TOP.png" alt="t" width="57" height="34" /></a></span> <a href="Brachistochrone curve-06.html"><img src="R-arrow.png" width="57" height="34" alt=""/></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
